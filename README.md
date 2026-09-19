@@ -150,6 +150,17 @@ To maintain a clean and isolated system, **no dummy managers or student accounts
    - **Self-Registration**: If the `signup` feature flag is enabled in the Admin Panel, students can register directly from the login page.
    - **Single Add**: Add individual students directly via the Users table.
 
+### 3. Pre-Seeding Existing Users via `users.csv`
+The system includes an automated migration and pre-seeding mechanism for existing accounts:
+- If a `users.csv` file is present in the project root directory during first-time setup, the application automatically imports all user accounts, room numbers, dietary preferences, balances, and dining halls into the database.
+- **Password Support**: Supports both existing bcrypt hashes (e.g., `$2b$...`) and plaintext passwords (which are hashed on the fly).
+- **Hall Provisioning**: Any dining hall referenced in `users.csv` is created automatically if not already present.
+- **Idempotent**: Existing accounts with duplicate usernames are safely skipped.
+- **Manual / CLI Import**: You can also run or re-run user CSV import at any time with:
+  ```bash
+  python import_helper.py users.csv
+  ```
+
 ---
 
 ## 🧪 Testing

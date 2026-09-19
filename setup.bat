@@ -87,6 +87,10 @@ if "!SKIP_SETUP!"=="0" (
     echo   Configuration saved to .env
 )
 
+if exist "users.csv" (
+    echo   OK - Found users.csv: existing user accounts will be seeded on startup.
+)
+
 :START_CONTAINERS
 
 echo [3/5] Building and starting containers...

@@ -105,6 +105,13 @@ def seed_data():
             db.add(admin)
             db.commit()
             print(f"Super Admin account '{admin_username}' created successfully.")
+
+        # Check if users.csv exists to initialize existing users into the database
+        import import_helper
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        csv_path = os.path.join(base_dir, "users.csv")
+        if os.path.exists(csv_path):
+            import_helper.import_users_from_csv(db, csv_path)
     finally:
         db.close()
 

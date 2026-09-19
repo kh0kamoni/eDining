@@ -81,6 +81,10 @@ EOF
     echo "  Configuration saved to .env"
 fi
 
+if [ -f "users.csv" ]; then
+    echo "  OK - Found users.csv: existing user accounts will be seeded on startup."
+fi
+
 # 3. Build & Run
 echo "[3/5] Building and starting containers..."
 docker compose build --quiet
