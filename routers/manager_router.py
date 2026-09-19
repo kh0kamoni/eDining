@@ -206,8 +206,9 @@ def add_deposit(payload: schemas.DepositCreate, current_user: models.User = Depe
     
     # Send deposit confirmation email (async — fire and forget)
     trx_ref = payload.description or f"Manual-{deposit.id}"
-    import threading
-    threading.Thread(target=_send_deposit_email, args=(student, payload.amount, trx_ref, db, "manual"), daemon=True).start()
+    if student.email:
+        import threading
+        threading.Thread(target=_send_deposit_email, args=(student.id, payload.amount, trx_ref, "manual"), daemon=True).start()
     
     return deposit
 
@@ -2903,49 +2904,56 @@ def approve_bkash_transaction(
     # Send confirmation email if SMTP configured (async)
     if student and student.email:
         import threading
-        threading.Thread(target=_send_deposit_email, args=(student, amount, trx.trx_id, db), daemon=True).start()
+        threading.Thread(target=_send_deposit_email, args=(student.id, amount, trx.trx_id, "bkash"), daemon=True).start()
 
     return {"message": "Transaction approved, deposit created.", "trx_id": trx.trx_id, "amount": amount}
 
 
-def _send_deposit_email(student, amount, trx_id, db, template_type="bkash"):
-    smtp_host = os.environ.get("SMTP_HOST", "")
-    smtp_user = os.environ.get("SMTP_USER", "")
-    smtp_pass = os.environ.get("SMTP_PASS", "")
-    for key in ["smtp_host", "smtp_port", "smtp_user", "smtp_pass"]:
-        row = db.query(models.AppConfig).filter(models.AppConfig.key == key).first()
-        if row and row.value:
-            if key == "smtp_host": smtp_host = row.value
-            elif key == "smtp_user": smtp_user = row.value
-            elif key == "smtp_pass": smtp_pass = row.value
-    if not (smtp_host and smtp_user and smtp_pass):
-        return
-    
-    # Load email templates from AppConfig
-    prefix = "deposit_email_" + template_type
-    default_subject = "Deposit Approved - eDining" if template_type == "bkash" else "Deposit Confirmed - eDining"
-    default_body = "Dear %s,\n\nYour deposit of BDT %.2f has been approved.\nTransaction: %s\n\nThank you,\neDining Management" % (student.name, amount, trx_id)
-    if template_type == "manual":
-        default_body = "Dear %s,\n\nYour deposit of BDT %.2f has been recorded.\nReference: %s\n\nThank you,\neDining Management" % (student.name, amount, trx_id)
-    
-    subj_row = db.query(models.AppConfig).filter(models.AppConfig.key == prefix + "_subject").first()
-    subject = subj_row.value if subj_row and subj_row.value else default_subject
-    body_row = db.query(models.AppConfig).filter(models.AppConfig.key == prefix + "_body").first()
-    body_template = body_row.value if body_row and body_row.value else default_body
-    
-    # Compute current cycle balance for the student
-    cycle_balance = student.balance
-    active_cycle = db.query(models.MealCycle).filter(models.MealCycle.status == "active", models.MealCycle.hall_id == student.hall_id).first()
-    if active_cycle:
-        dep_sum = db.query(models.Deposit).filter(models.Deposit.user_id == student.id, models.Deposit.meal_cycle_id == active_cycle.id).with_entities(models.Deposit.amount).all()
-        total_dep = sum(d[0] for d in dep_sum) if dep_sum else 0.0
-        bill_statuses = db.query(models.StudentMealStatus).filter(models.StudentMealStatus.user_id == student.id, models.StudentMealStatus.meal_cycle_id == active_cycle.id, models.StudentMealStatus.is_deducted == True).all()
-        total_ded = sum(s.amount_deducted or 0 for s in bill_statuses)
-        cycle_balance = round(total_dep - total_ded, 2)
-    
-    body = body_template.replace("{name}", student.name or "Student").replace("{amount}", f"{amount:.2f}").replace("{trx_id}", trx_id).replace("{date}", date.today().strftime("%Y-%m-%d")).replace("{balance}", f"{cycle_balance:.2f}")
-    
+def _send_deposit_email(student_id: int, amount: float, trx_id: str, template_type="bkash"):
+    import database
+    from datetime import date
+    db = database.SessionLocal()
     try:
+        student = db.query(models.User).filter(models.User.id == student_id).first()
+        if not student or not student.email:
+            return
+
+        smtp_host = os.environ.get("SMTP_HOST", "")
+        smtp_user = os.environ.get("SMTP_USER", "")
+        smtp_pass = os.environ.get("SMTP_PASS", "")
+        for key in ["smtp_host", "smtp_port", "smtp_user", "smtp_pass"]:
+            row = db.query(models.AppConfig).filter(models.AppConfig.key == key).first()
+            if row and row.value:
+                if key == "smtp_host": smtp_host = row.value
+                elif key == "smtp_user": smtp_user = row.value
+                elif key == "smtp_pass": smtp_pass = row.value
+        if not (smtp_host and smtp_user and smtp_pass):
+            return
+        
+        # Load email templates from AppConfig
+        prefix = "deposit_email_" + template_type
+        default_subject = "Deposit Approved - eDining" if template_type == "bkash" else "Deposit Confirmed - eDining"
+        default_body = "Dear %s,\n\nYour deposit of BDT %.2f has been approved.\nTransaction: %s\n\nThank you,\neDining Management" % (student.name or "Student", amount, trx_id)
+        if template_type == "manual":
+            default_body = "Dear %s,\n\nYour deposit of BDT %.2f has been recorded.\nReference: %s\n\nThank you,\neDining Management" % (student.name or "Student", amount, trx_id)
+        
+        subj_row = db.query(models.AppConfig).filter(models.AppConfig.key == prefix + "_subject").first()
+        subject = subj_row.value if subj_row and subj_row.value else default_subject
+        body_row = db.query(models.AppConfig).filter(models.AppConfig.key == prefix + "_body").first()
+        body_template = body_row.value if body_row and body_row.value else default_body
+        
+        # Compute current cycle balance for the student
+        cycle_balance = student.balance
+        active_cycle = db.query(models.MealCycle).filter(models.MealCycle.status == "active", models.MealCycle.hall_id == student.hall_id).first()
+        if active_cycle:
+            dep_sum = db.query(models.Deposit).filter(models.Deposit.user_id == student.id, models.Deposit.meal_cycle_id == active_cycle.id).with_entities(models.Deposit.amount).all()
+            total_dep = sum(d[0] for d in dep_sum) if dep_sum else 0.0
+            bill_statuses = db.query(models.StudentMealStatus).filter(models.StudentMealStatus.user_id == student.id, models.StudentMealStatus.meal_cycle_id == active_cycle.id, models.StudentMealStatus.is_deducted == True).all()
+            total_ded = sum(s.amount_deducted or 0 for s in bill_statuses)
+            cycle_balance = round(total_dep - total_ded, 2)
+        
+        body = body_template.replace("{name}", student.name or "Student").replace("{amount}", f"{amount:.2f}").replace("{trx_id}", trx_id).replace("{date}", date.today().strftime("%Y-%m-%d")).replace("{balance}", f"{cycle_balance:.2f}")
+        
         import smtplib
         from email.mime.text import MIMEText
         from email.header import Header
@@ -2959,4 +2967,5 @@ def _send_deposit_email(student, amount, trx_id, db, template_type="bkash"):
             server.sendmail(smtp_user, [student.email], msg.as_string())
     except Exception:
         pass
-
+    finally:
+        db.close()

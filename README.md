@@ -166,6 +166,53 @@ The system includes an automated migration and pre-seeding mechanism for existin
 
 ---
 
+## 👨‍🍳 Manager Guide: Starting a New Month & Daily Operations
+
+When a new manager logs into the system for their assigned dining hall, here is the complete step-by-step workflow:
+
+### 1. Starting a New Meal Cycle
+1. **Log in**: Sign into the portal with your manager account.
+2. **Dashboard Overview**: If no meal cycle is running, the dashboard displays `No Active Cycle` with a **Create Cycle** button.
+3. **Create Cycle**:
+   - Click **Create Cycle**.
+   - Choose the target **Month** (e.g., `2026-10`).
+   - Set the daily **Cutoff Time** (e.g., `20:00` / 8:00 PM) after which students cannot toggle meals for the next day.
+   - *(Optional)* Specify custom **Start Date** and **End Date** if running a mid-month or non-standard cycle.
+   - Set lunch/dinner cost allocation percentages (defaults to `50% / 50%`).
+4. **Activate**:
+   - Click **Start Cycle**. The system automatically seeds meal schedules for all students enrolled in your hall based on their default dining status (`both`, `lunch_only`, `dinner_only`).
+   - Click **Activate Cycle** when ready for live operations.
+
+### 2. Daily Manager Routines
+- **Log Daily Expenses (Bazar)**:
+  - Go to **Expenses** $\rightarrow$ **Add Expense** (or **Batch Add**).
+  - Enter item category (`bazar`, `spice`, `gas`, `staff_wage`), description, and amount.
+  - The system dynamically updates the live running meal rate in real time.
+- **Update Daily Menu**:
+  - Open **Daily Menu**. Enter lunch and dinner dishes.
+  - Toggle dietary flags if fish, pangas, beef, or mutton are served. The system automatically honors student dietary preferences (egg substitutions, alternative proteins).
+- **Print Daily Attendance Sheet**:
+  - Click **Print Meal Sheet** for the date.
+  - A clean, print-optimized grid organized by room number is generated for dining hall staff to tick attendance.
+- **Manage Deposits**:
+  - **Cash Deposits**: Record cash collected in **Deposits** $\rightarrow$ **Add Deposit**.
+  - **bKash Payments**: Review and approve student-submitted bKash transactions.
+  - Balance updates instantly and confirmation emails are dispatched automatically.
+
+### 3. Month-End Billing & Closing Cycle
+1. **Review Ledger & Financial Summary**:
+   - Check **Financial Summary** to view total expenses, guest contributions, total paying units, and running meal rate.
+   - Review the **Profit / Money Flow** statement to confirm total cash in hand versus bank/mobile banking balances.
+2. **Close Cycle**:
+   - Click **Close Cycle**. The billing engine reconciles exact daily meal costs and manager charges against each student's deposits.
+   - Final balances carry forward cleanly to the student's overall account for the next month.
+3. **Print / Email Statements**:
+   - Generate full cycle summary PDFs or email digital bill receipts directly to students with one click.
+4. **Reopen Support**:
+   - If an expense or adjustment was missed, click **Reopen Cycle** to safely unfinalize balances, make adjustments, and re-close.
+
+---
+
 ## 🧪 Testing
 
 The repository includes a comprehensive test suite covering 64 unit and integration test cases across billing calculations, edge cases, negative balances, multi-cycle rollovers, and bKash workflows:
