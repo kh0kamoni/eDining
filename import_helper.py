@@ -12,9 +12,11 @@ def import_halls_from_csv(db: Session, filepath: str = None) -> int:
     if not filepath:
         base_dir = os.path.dirname(os.path.abspath(__file__))
         filepath = os.path.join(base_dir, "halls.csv")
+        if not os.path.exists(filepath):
+            filepath = os.path.join(base_dir, "hall.csv")
 
     if not os.path.exists(filepath):
-        print(f"Notice: halls.csv file not found at {filepath}. Skipping halls import.")
+        print(f"Notice: halls.csv/hall.csv file not found. Skipping halls import.")
         return 0
 
     print(f"Starting import of halls from {filepath}...")
@@ -77,9 +79,11 @@ def import_users_from_csv(db: Session, filepath: str = None) -> int:
     if not filepath:
         base_dir = os.path.dirname(os.path.abspath(__file__))
         filepath = os.path.join(base_dir, "users.csv")
+        if not os.path.exists(filepath):
+            filepath = os.path.join(base_dir, "user.csv")
 
     if not os.path.exists(filepath):
-        print(f"Notice: users.csv file not found at {filepath}. Skipping CSV import.")
+        print(f"Notice: users.csv/user.csv file not found. Skipping CSV import.")
         return 0
 
     print(f"Starting import of users from {filepath}...")

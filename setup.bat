@@ -75,9 +75,12 @@ if "!SKIP_SETUP!"=="0" (
     if "!APP_PORT!"=="" set "APP_PORT=8090"
 
     set "INIT_HALLS=1"
-    if exist "halls.csv" (
+    set "HALLS_FILE="
+    if exist "halls.csv" set "HALLS_FILE=halls.csv"
+    if not defined HALLS_FILE if exist "hall.csv" set "HALLS_FILE=hall.csv"
+    if defined HALLS_FILE (
         echo.
-        set /p "ASK_HALLS=  Found halls.csv. Initialize existing dining halls from halls.csv? [Y/n]: "
+        set /p "ASK_HALLS=  Found !HALLS_FILE!. Initialize existing dining halls from !HALLS_FILE!? [Y/n]: "
         if /i "!ASK_HALLS!"=="n" (
             set "INIT_HALLS=0"
         ) else (
@@ -86,8 +89,11 @@ if "!SKIP_SETUP!"=="0" (
     )
 
     set "INIT_USERS=1"
-    if exist "users.csv" (
-        set /p "ASK_USERS=  Found users.csv. Initialize existing users from users.csv? [Y/n]: "
+    set "USERS_FILE="
+    if exist "users.csv" set "USERS_FILE=users.csv"
+    if not defined USERS_FILE if exist "user.csv" set "USERS_FILE=user.csv"
+    if defined USERS_FILE (
+        set /p "ASK_USERS=  Found !USERS_FILE!. Initialize existing users from !USERS_FILE!? [Y/n]: "
         if /i "!ASK_USERS!"=="n" (
             set "INIT_USERS=0"
         ) else (

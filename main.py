@@ -74,9 +74,11 @@ def seed_data():
         import import_helper
         base_dir = os.path.dirname(os.path.abspath(__file__))
 
-        # 1. Initialize halls from halls.csv if enabled
+        # 1. Initialize halls from halls.csv / hall.csv if enabled
         init_halls_flag = os.environ.get("INIT_HALLS", "1").strip().lower() in ["1", "true", "yes"]
         halls_csv_path = os.path.join(base_dir, "halls.csv")
+        if not os.path.exists(halls_csv_path):
+            halls_csv_path = os.path.join(base_dir, "hall.csv")
         if init_halls_flag and os.path.exists(halls_csv_path):
             import_helper.import_halls_from_csv(db, halls_csv_path)
 
@@ -115,9 +117,11 @@ def seed_data():
             db.commit()
             print(f"Super Admin account '{admin_username}' created successfully.")
 
-        # 3. Initialize users from users.csv if enabled
+        # 3. Initialize users from users.csv / user.csv if enabled
         init_users_flag = os.environ.get("INIT_USERS", "1").strip().lower() in ["1", "true", "yes"]
         users_csv_path = os.path.join(base_dir, "users.csv")
+        if not os.path.exists(users_csv_path):
+            users_csv_path = os.path.join(base_dir, "user.csv")
         if init_users_flag and os.path.exists(users_csv_path):
             import_helper.import_users_from_csv(db, users_csv_path)
     finally:

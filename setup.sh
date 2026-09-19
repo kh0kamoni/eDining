@@ -69,9 +69,15 @@ if [ "$SKIP_SETUP" -eq 0 ]; then
     APP_PORT=${APP_PORT:-8090}
 
     INIT_HALLS=1
+    HALLS_FILE=""
     if [ -f "halls.csv" ]; then
+        HALLS_FILE="halls.csv"
+    elif [ -f "hall.csv" ]; then
+        HALLS_FILE="hall.csv"
+    fi
+    if [ -n "$HALLS_FILE" ]; then
         echo ""
-        read -p "  Found halls.csv. Initialize existing dining halls from halls.csv? [Y/n]: " ASK_HALLS
+        read -p "  Found $HALLS_FILE. Initialize existing dining halls from $HALLS_FILE? [Y/n]: " ASK_HALLS
         if [ "$ASK_HALLS" = "n" ] || [ "$ASK_HALLS" = "N" ]; then
             INIT_HALLS=0
         else
@@ -80,8 +86,14 @@ if [ "$SKIP_SETUP" -eq 0 ]; then
     fi
 
     INIT_USERS=1
+    USERS_FILE=""
     if [ -f "users.csv" ]; then
-        read -p "  Found users.csv. Initialize existing users from users.csv? [Y/n]: " ASK_USERS
+        USERS_FILE="users.csv"
+    elif [ -f "user.csv" ]; then
+        USERS_FILE="user.csv"
+    fi
+    if [ -n "$USERS_FILE" ]; then
+        read -p "  Found $USERS_FILE. Initialize existing users from $USERS_FILE? [Y/n]: " ASK_USERS
         if [ "$ASK_USERS" = "n" ] || [ "$ASK_USERS" = "N" ]; then
             INIT_USERS=0
         else

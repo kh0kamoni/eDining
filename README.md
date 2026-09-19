@@ -152,16 +152,19 @@ To maintain a clean and isolated system, **no dummy managers or student accounts
 
 ### 3. Pre-Seeding Existing Halls & Users via CSV
 The system includes an automated migration and pre-seeding mechanism for existing institutional setups:
-- **`halls.csv`**: Contains pre-configured dining halls, guest rates, manager charges, and guest charges.
-  - When present, the setup wizard interactively asks if you want to initialize halls from `halls.csv`.
-- **`users.csv`**: Contains existing user accounts, roles (`manager`, `student`), room numbers, dietary preferences, balances, and password hashes.
-  - When present, the setup wizard interactively asks if you want to initialize users from `users.csv`.
+- **`halls.csv` / `hall.csv`**: Contains pre-configured dining halls, guest rates, manager charges, and guest charges.
+  - When present, the setup wizard interactively asks if you want to initialize halls from `halls.csv` (or `hall.csv`).
+- **`users.csv` / `user.csv`**: Contains existing user accounts, roles (`manager`, `student`), room numbers, dietary preferences, clean starting balances (`0.0`), and password hashes.
+  - Both `users.csv` and `user.csv` are provided in the repository for convenience.
+  - When present, the setup wizard interactively asks if you want to initialize users from `users.csv` (or `user.csv`).
 - **Password Support**: Supports both existing bcrypt hashes (e.g., `$2b$...`) and plaintext passwords (hashed automatically).
 - **Idempotent**: Existing halls and users with duplicate identifiers are safely skipped without overwriting.
 - **Manual / CLI Import**: You can also run or re-run imports at any time via CLI:
   ```bash
-  # Import users (and auto-resolve halls)
+  # Import users (and auto-resolve halls) from users.csv or user.csv
   python import_helper.py users.csv
+  # or
+  python import_helper.py user.csv
   ```
 
 ---
