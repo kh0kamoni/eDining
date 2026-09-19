@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+set -e
+
+# Change to script directory
+cd "$(dirname "$0")"
+
+echo ""
+echo "=============================================="
+echo "   eDining Management System - Docker Setup"
+echo "=============================================="
+echo ""
+
+# 1. Check Docker
+echo "[1/5] Checking Docker installation..."
+if ! command -v docker >/dev/null 2>&1; then
+    echo "ERROR: Docker is not installed. Please install Docker first: https://docs.docker.com/get-docker/"
+    exit 1
+fi
+echo "  OK - Docker found."
+
+if ! docker compose version >/dev/null 2>&1; then
+    echo "ERROR: 'docker compose' is not available. Please install Docker Compose v2."
+    exit 1
+fi
+echo "  OK - Docker Compose found."
+
+# 2. Check / create .env
+echo "[2/5] Checking configuration..."
+if [ -f ".env" ] && grep -q "^ADMIN_USERNAME=" ".env"; then
+    echo "  OK - Existing configuration found."
+else
+    echo "  First-time setup. Creating admin credentials..."
+    echo ""
+    echo "  (Press Enter to accept defaults in brackets)"
+    echo ""
+
+    read -p "  Admin username [admin]: " ADMIN_USERNAME
+    ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
+
+    read -p "  Admin password [admin123]: " ADMIN_PASSWORD
+    ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
+
+    read -p "  Admin display name [System Super Admin]: " ADMIN_NAME
+    ADMIN_NAME=${ADMIN_NAME:-System Super Admin}
+
+    read -p "  Admin phone [01711223344]: " ADMIN_PHONE
+    ADMIN_PHONE=${ADMIN_PHONE:-01711223344}
+
+    cat <<EOF > .env
+ADMIN_USERNAME=${ADMIN_USERNAME}
+ADMIN_PASSWORD=${ADMIN_PASSWORD}
+ADMIN_NAME=${ADMIN_NAME}
+ADMIN_PHONE=${ADMIN_PHONE}
+PORT=8090
+EOF
+    echo "  Saved configuration to .env"
+fi
+
+# 3. Build & Run
+echo "[3/5] Building and starting containers..."
+docker compose build --quiet
+docker compose up -d
+
+# 4. Wait for app readiness
+echo "[4/5] Waiting for application to initialize..."
+TIMEOUT=30
+until docker compose exec -T app python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/student/halls')" >/dev/null 2>&1 || [ $TIMEOUT -eq 0 ]; do
+    sleep 2
+    TIMEOUT=$((TIMEOUT - 1))
+done
+
+if [ $TIMEOUT -eq 0 ]; then
+    echo "ERROR: Application startup timed out. Check logs with 'docker compose logs app'."
+    exit 1
+fi
+
+APP_PORT=$(grep "^PORT=" .env 2>/dev/null | cut -d '=' -f2)
+APP_PORT=${APP_PORT:-8090}
+SHOW_USER=$(grep "^ADMIN_USERNAME=" .env 2>/dev/null | cut -d '=' -f2)
+SHOW_PASS=$(grep "^ADMIN_PASSWORD=" .env 2>/dev/null | cut -d '=' -f2)
+
+echo ""
+echo "=============================================="
+echo "   eDining is now running!"
+echo "=============================================="
+echo ""
+echo "  URL: http://localhost:${APP_PORT}"
+echo ""
+if [ -n "$SHOW_USER" ]; then
+    echo "  Admin login: ${SHOW_USER} / ${SHOW_PASS}"
+else
+    echo "  Admin login: Check .env file for credentials."
+fi
+echo ""
+echo "  Commands:"
+echo "    docker compose logs app -f    View live logs"
+echo "    docker compose down           Stop services"
+echo "    docker compose up -d          Restart services"
+echo ""

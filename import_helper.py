@@ -11,9 +11,10 @@ def import_manual_data(db: Session):
         print("Manual Excel data already imported in main tables. Skipping seeding.")
         return
 
-    filepath = r"c:\Users\Khoka Moni\eDining\old_data\data.xlsx"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    filepath = os.path.join(base_dir, "old_data", "data.xlsx")
     if not os.path.exists(filepath):
-        print(f"Error: Excel file not found at {filepath}")
+        print(f"Notice: Excel data file not found at {filepath}. Skipping.")
         return
 
     print(f"Starting import of manual Excel data from {filepath}...")
