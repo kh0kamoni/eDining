@@ -1,260 +1,260 @@
 username,password_hash,role,hall_name,room_number,name,phone,email,balance,free_meal,status,egg_alternative,prefer_beef,prefer_mutton,meal_preference,fish_egg_pref,meat_pref
-khoka_208,$2b$12$Husi8fpyHSnccZ7ToLUiGe0Se0hYKrSkRVw3hBYFI.ZufOcY6wewa,manager,Muktijoddha Hall,208,Khoka,,khokamoni004@gmail.com,-600.0,1,both,1,1,0,if_pangas_then_egg,if_pangas_then_egg,normal
+khoka_208,$2b$12$Husi8fpyHSnccZ7ToLUiGe0Se0hYKrSkRVw3hBYFI.ZufOcY6wewa,manager,Muktijoddha Hall,208,Khoka,,khokamoni004@gmail.com,0.0,1,both,1,1,0,if_pangas_then_egg,if_pangas_then_egg,normal
 naine_404,$2b$12$nHjfO2Ah2ENot1LDiImCVeanj4SGo3xAK0sXZ37gF5xRZUCS0XmDK,manager,Muktijoddha Hall,404,Naine,,,0.0,1,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-asifur_000,asifur_000,student,Muktijoddha Hall,000,Asifur,,,-477.3284612207966,0,,0,0,0,,,
-limon_101,$2b$12$2sS1VECUUzqv.hjT6WY7rO1tf1yLtjkIVAKBhiPTktqDFeEhYnD36,student,Muktijoddha Hall,101,Limon,,,-17.699999999999932,0,both,0,0,0,normal,normal,normal
-maruf_101,$2b$12$zuV/1fCAtXp0va7lPm2z4eg1u1mWrMsiPjFkOVr3fCPI7TEGlqkfm,student,Muktijoddha Hall,101,Maruf,,,1.830000000001064,0,both,0,0,0,veg,normal,normal
-mubin_101,$2b$12$jIRKZtshNC.zHDpN2yO8sesJjJMwYnMUj7McBBClVaQCWa7VsTriW,student,Muktijoddha Hall,101,Mubin,,,3.2399999999995543,0,both,0,0,0,normal,normal,normal
-tahsan_101,$2b$12$9ofR4hHbmCMCvmYZ8xXsqOpTFFHIWxrA2ThsserG.MctyRUkLxp0W,student,Muktijoddha Hall,101,Tahsan,,,7.1599999999998545,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-arnob_102,$2b$12$1cogE6AGkgDvOn9E6uzzOephqCwChGuEOH85vPCADswTVu9XqjUxC,student,Muktijoddha Hall,102,Arnob,,,-4.459999999999809,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-ovi_102,$2b$12$p4Lq8aUT2qIDECMu0q010eWwan10Wy1poE/ybmYPGsak8Yi1qvEVS,student,Muktijoddha Hall,102,Ovi,,,-2.3599999999996157,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-rion_102,$2b$12$FKi5F1bX5lRG5h7FoMPMquEHUjevRCz7kIHURpbFayRhQfpB0V19q,student,Muktijoddha Hall,102,Rion,,,-3.2099999999997806,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-saikat_102,$2b$12$S2Sfi1.y2LV4nPdo5bnjRuHKBWNiO.UlpWeejZ5V5YTSo87SVdDWS,student,Muktijoddha Hall,102,Saikat,,,8.670000000000442,0,both,0,0,0,normal,normal,normal
-abid_103,$2b$12$aa8UciF50O0oRlA1V3Xmo.esNaH/gwiY7CGQ.mt9RVQUiqphFYuQe,student,Muktijoddha Hall,103,Abid,,,1.7600000000001046,0,both,0,0,0,normal,normal,normal
-bayzid_103,$2b$12$CqR6aIycxBLt7/XRnO/aMOjVTWwMyouUEDxQvk3HMmSdxccy4yAPO,student,Muktijoddha Hall,103,Bayzid,,,-2.8299999999998704,0,both,0,0,0,normal,normal,normal
-biplop_103,$2b$12$BJQ4uSnkNsCTFutwvSRe3ePecfp74yH6Ctq5en2F0N9MkNnQL4j2i,student,Muktijoddha Hall,103,Biplop,,,7.180000000000632,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-hasibul_103,$2b$12$AQ6Mj8/Ho8sJyY5/nlYoy.RkCMNG/vaEGwwdWe5x/VaodKmEx4iyS,student,Muktijoddha Hall,103,Hasibul,,,5.059999999999889,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-samiul_103,$2b$12$lsKwGDUNHEvvSYAehpnrKuH5wGfO41rllioRWeAfptD28p4K3BwbS,student,Muktijoddha Hall,103,Samiul,,,-5.619999999999777,0,both,0,0,0,normal,normal,normal
-ashraful_107,$2b$12$PyXpm9mD8/Iip1tT7iuzSOCKfRw.iA4dpk77W0DliNerRcp1yk8Le,student,Muktijoddha Hall,107,Ashraful,,,-71.48082136080257,0,both,0,0,0,normal,normal,normal
-azmain_107,$2b$12$UdNQ5E6q7kxC6jBkko2JxOdwJWc75/tVNny3L9Mu53hV/T8YrMap6,student,Muktijoddha Hall,107,Azmain,,,4.4500000000000455,0,both,0,0,0,normal,normal,normal
-ezaz_107,$2b$12$PyXpm9mD8/Iip1tT7iuzSOCKfRw.iA4dpk77W0DliNerRcp1yk8Le,student,Muktijoddha Hall,107,Ezaz,,,-971.1208213608026,0,both,0,0,0,normal,normal,normal
-nayeem_107,$2b$12$HJb5CcQGLEqa0ZFubFA.2Oczjxwv90F8imSx/d9JtqoDKsvPG6oi6,student,Muktijoddha Hall,107,Nayeem,,,-5.11418630288,0,both,0,0,0,normal,normal,normal
-parvej_107,$2b$12$M/a4qSfGZ7bpljWHag.q.uihor//auvU07mZ8Zt2gTzYEv05nr.SW,student,Muktijoddha Hall,107,Parvej,,,-0.23999999999932697,0,both,0,0,0,normal,normal,normal
-sadman_107,sadman_107,student,Muktijoddha Hall,107,Sadman,,,-2318.81,0,,0,0,0,normal,normal,normal
-tomal_107,$2b$12$PR3IxAaTnb4aXYl1RAQAoeL1mjVFtuusjfF25u38JnPJHYK81WXCi,student,Muktijoddha Hall,107,Tomal,,,5.990000000000691,0,both,0,0,0,normal,normal,mutton
-afif_108,$2b$12$KUwVYyfG4u.AWURx/eSecunXCMHJqm3PjP4NsYMnympIhnrjTZ7da,student,Muktijoddha Hall,108,Afif,,,2.5000000000001705,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-jamil_108,$2b$12$7zrgpD5hCEcJrKksezzjqu8TDop0h8kRN4VspNZyejZrz1YeoizbO,student,Muktijoddha Hall,108,Jamil,,,0.16999999999995907,0,both,0,0,0,normal,normal,normal
-shamim_108,$2b$12$v2p3p4NLD0h8.fxKeN8y.ujSWKun.AT8F.KFNx0j3goRV8.sVuzGK,student,Muktijoddha Hall,108,Shamim,,,-1158.7099999999996,0,both,0,0,0,normal,normal,normal
-shibli_108,$2b$12$vG8o9Y6BlAmqDrSRsJQyzefw2ISqsdMOJDiI1p8SnfYfolWyZisQK,student,Muktijoddha Hall,108,Shibli,,,-6.080000000000325,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-ibrahim_109,$2b$12$3ZR.7.INhvSP06.QCFNXWOwhrDBboxc2.LiWh.DZv9/SvZ2BvhAQW,student,Muktijoddha Hall,109,Ibrahim,,,3.419999999999959,0,both,0,0,0,normal,normal,normal
-mahbub_109,$2b$12$gxUe.Mr83wuvRCUVwqBLE.P7sMQmb3OaVE8moxKvqZAu9rO8iEcA6,student,Muktijoddha Hall,109,Mahbub,,,2.929999999999893,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-noman_109,$2b$12$1BmnrGBNqWitCZRmUKOEAOtmOGQrhxJRAE96ehKl6O5Ikj3.KSOAu,student,Muktijoddha Hall,109,Noman,,,-5.479999999999791,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-tarik_109,$2b$12$YdMcO5pStNv9oZt8sq7bqe27Pr/9hZBxCJEKKZv7ayGzHfJNX9vIO,student,Muktijoddha Hall,109,Tarik,,,-43.30999999999989,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-anwar_201,$2b$12$AvnmdhhUr.eabFKQXLLZg.hs8eIi0C4Vrz5/v6KRazFFinSL3Wm6K,student,Muktijoddha Hall,201,Anwar,,,0.6399999999999864,0,both,0,0,0,normal,normal,normal
-mahmudul_201,$2b$12$e1irBjCUgQWwbs8GVCtjlOeD5JeDOzGbNjIjGmGglS06icjxkjadq,student,Muktijoddha Hall,201,Mahmudul,,,1.7300000000003593,0,both,0,0,0,normal,normal,normal
-shaharul_201,$2b$12$N8tS9aVkrhj5TcIvNLq3HOSwH5Dv2jrVPjTw7yDzO3tNz99C1op6q,student,Muktijoddha Hall,201,Shaharul,,,-18.079999999999927,0,both,0,0,0,normal,egg_instead_of_fish,normal
-opu_202,$2b$12$h448sfWOS172LkaUKbG.iOXxFOk5LXSjlftJ5D8LpLsJkLdG3EeOq,student,Muktijoddha Hall,202,Opu,,,-3.0999999999997954,0,both,0,0,0,normal,normal,normal
-rajdeep_202,$2b$12$OKmxQwAFHV6LgGPYQ7GGlO9/MsNhwLJcDZTKICXzXo4DMoWUKAeYi,student,Muktijoddha Hall,202,Rajdeep,,,-10.06000000000006,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,mutton
-zahid_202,$2b$12$tjr4q4J5FeORLMPhTmw0/uYhNkE16MRm0wDMJcmZ2QR5nOE2KNcwG,student,Muktijoddha Hall,202,Zahid,,,0.5099999999999625,0,both,0,0,0,normal,normal,normal
-akash_203,$2b$12$VrVDIOIYeZCFLqvNWk.vTu4uWkU9s1JARtPMSTALhU16AuBB8tlGy,student,Muktijoddha Hall,203,Akash,,,-2.839999999999236,0,both,0,0,0,normal,normal,mutton
-mahim_203,$2b$12$GVfPSD5Rdd6X4KWfAZUJt.GrheruztmAF4ws3odT0cPggp7sg4oHe,student,Muktijoddha Hall,203,Mahim,,,-635.3700000000001,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-fabian_204,$2b$12$ITueToM37ePGt45kspfa4.K0nLY0D1jGbLtXrQMYXtuSqwX8NI5s6,student,Muktijoddha Hall,204,Fabian,,,-3.299999999999727,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-fahim_204,$2b$12$/ESDu/rBuPk5iTmj37.INexlqeEK6M1PYUw38v9kyK7Z1wap54ABi,student,Muktijoddha Hall,204,Fahim,,,6.6399999999999295,0,both,0,0,0,normal,normal,normal
-mostaq_204,$2b$12$9hwRIG65N0SZtPX6Ij2Ch.i6PZFf2wJrjd237hRcDzqVFpzpocc1u,student,Muktijoddha Hall,204,Mostaq,,,-12.489999999999938,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-sumon_204,$2b$12$mUUprNrNNs2JHmtmR6gss.NNDyK3CIZzaaMtdAc40H9Tgx6AyW/HG,student,Muktijoddha Hall,204,Sumon,,,-3.0999999999994543,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
+asifur_000,$2b$12$v0TdmdIhTO6ks2Ucst4XxO9bBhr77d7Ml9WQ9ETqoM29MASSxSrfW,student,Muktijoddha Hall,000,Asifur,,,0.0,0,both,0,0,0,normal,normal,normal
+limon_101,$2b$12$2sS1VECUUzqv.hjT6WY7rO1tf1yLtjkIVAKBhiPTktqDFeEhYnD36,student,Muktijoddha Hall,101,Limon,,,0.0,0,both,0,0,0,normal,normal,normal
+maruf_101,$2b$12$zuV/1fCAtXp0va7lPm2z4eg1u1mWrMsiPjFkOVr3fCPI7TEGlqkfm,student,Muktijoddha Hall,101,Maruf,,,0.0,0,both,0,0,0,veg,normal,normal
+mubin_101,$2b$12$jIRKZtshNC.zHDpN2yO8sesJjJMwYnMUj7McBBClVaQCWa7VsTriW,student,Muktijoddha Hall,101,Mubin,,,0.0,0,both,0,0,0,normal,normal,normal
+tahsan_101,$2b$12$9ofR4hHbmCMCvmYZ8xXsqOpTFFHIWxrA2ThsserG.MctyRUkLxp0W,student,Muktijoddha Hall,101,Tahsan,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+arnob_102,$2b$12$1cogE6AGkgDvOn9E6uzzOephqCwChGuEOH85vPCADswTVu9XqjUxC,student,Muktijoddha Hall,102,Arnob,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+ovi_102,$2b$12$p4Lq8aUT2qIDECMu0q010eWwan10Wy1poE/ybmYPGsak8Yi1qvEVS,student,Muktijoddha Hall,102,Ovi,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+rion_102,$2b$12$FKi5F1bX5lRG5h7FoMPMquEHUjevRCz7kIHURpbFayRhQfpB0V19q,student,Muktijoddha Hall,102,Rion,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+saikat_102,$2b$12$S2Sfi1.y2LV4nPdo5bnjRuHKBWNiO.UlpWeejZ5V5YTSo87SVdDWS,student,Muktijoddha Hall,102,Saikat,,,0.0,0,both,0,0,0,normal,normal,normal
+abid_103,$2b$12$aa8UciF50O0oRlA1V3Xmo.esNaH/gwiY7CGQ.mt9RVQUiqphFYuQe,student,Muktijoddha Hall,103,Abid,,,0.0,0,both,0,0,0,normal,normal,normal
+bayzid_103,$2b$12$CqR6aIycxBLt7/XRnO/aMOjVTWwMyouUEDxQvk3HMmSdxccy4yAPO,student,Muktijoddha Hall,103,Bayzid,,,0.0,0,both,0,0,0,normal,normal,normal
+biplop_103,$2b$12$BJQ4uSnkNsCTFutwvSRe3ePecfp74yH6Ctq5en2F0N9MkNnQL4j2i,student,Muktijoddha Hall,103,Biplop,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+hasibul_103,$2b$12$AQ6Mj8/Ho8sJyY5/nlYoy.RkCMNG/vaEGwwdWe5x/VaodKmEx4iyS,student,Muktijoddha Hall,103,Hasibul,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+samiul_103,$2b$12$lsKwGDUNHEvvSYAehpnrKuH5wGfO41rllioRWeAfptD28p4K3BwbS,student,Muktijoddha Hall,103,Samiul,,,0.0,0,both,0,0,0,normal,normal,normal
+ashraful_107,$2b$12$PyXpm9mD8/Iip1tT7iuzSOCKfRw.iA4dpk77W0DliNerRcp1yk8Le,student,Muktijoddha Hall,107,Ashraful,,,0.0,0,both,0,0,0,normal,normal,normal
+azmain_107,$2b$12$UdNQ5E6q7kxC6jBkko2JxOdwJWc75/tVNny3L9Mu53hV/T8YrMap6,student,Muktijoddha Hall,107,Azmain,,,0.0,0,both,0,0,0,normal,normal,normal
+ezaz_107,$2b$12$PyXpm9mD8/Iip1tT7iuzSOCKfRw.iA4dpk77W0DliNerRcp1yk8Le,student,Muktijoddha Hall,107,Ezaz,,,0.0,0,both,0,0,0,normal,normal,normal
+nayeem_107,$2b$12$HJb5CcQGLEqa0ZFubFA.2Oczjxwv90F8imSx/d9JtqoDKsvPG6oi6,student,Muktijoddha Hall,107,Nayeem,,,0.0,0,both,0,0,0,normal,normal,normal
+parvej_107,$2b$12$M/a4qSfGZ7bpljWHag.q.uihor//auvU07mZ8Zt2gTzYEv05nr.SW,student,Muktijoddha Hall,107,Parvej,,,0.0,0,both,0,0,0,normal,normal,normal
+sadman_107,$2b$12$I2wVrjp3wQgbvXJis22dneLuW3cli5.nJtG7qt1LwZee3yEg45exy,student,Muktijoddha Hall,107,Sadman,,,0.0,0,both,0,0,0,normal,normal,normal
+tomal_107,$2b$12$PR3IxAaTnb4aXYl1RAQAoeL1mjVFtuusjfF25u38JnPJHYK81WXCi,student,Muktijoddha Hall,107,Tomal,,,0.0,0,both,0,0,0,normal,normal,mutton
+afif_108,$2b$12$KUwVYyfG4u.AWURx/eSecunXCMHJqm3PjP4NsYMnympIhnrjTZ7da,student,Muktijoddha Hall,108,Afif,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+jamil_108,$2b$12$7zrgpD5hCEcJrKksezzjqu8TDop0h8kRN4VspNZyejZrz1YeoizbO,student,Muktijoddha Hall,108,Jamil,,,0.0,0,both,0,0,0,normal,normal,normal
+shamim_108,$2b$12$v2p3p4NLD0h8.fxKeN8y.ujSWKun.AT8F.KFNx0j3goRV8.sVuzGK,student,Muktijoddha Hall,108,Shamim,,,0.0,0,both,0,0,0,normal,normal,normal
+shibli_108,$2b$12$vG8o9Y6BlAmqDrSRsJQyzefw2ISqsdMOJDiI1p8SnfYfolWyZisQK,student,Muktijoddha Hall,108,Shibli,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+ibrahim_109,$2b$12$3ZR.7.INhvSP06.QCFNXWOwhrDBboxc2.LiWh.DZv9/SvZ2BvhAQW,student,Muktijoddha Hall,109,Ibrahim,,,0.0,0,both,0,0,0,normal,normal,normal
+mahbub_109,$2b$12$gxUe.Mr83wuvRCUVwqBLE.P7sMQmb3OaVE8moxKvqZAu9rO8iEcA6,student,Muktijoddha Hall,109,Mahbub,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+noman_109,$2b$12$1BmnrGBNqWitCZRmUKOEAOtmOGQrhxJRAE96ehKl6O5Ikj3.KSOAu,student,Muktijoddha Hall,109,Noman,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+tarik_109,$2b$12$YdMcO5pStNv9oZt8sq7bqe27Pr/9hZBxCJEKKZv7ayGzHfJNX9vIO,student,Muktijoddha Hall,109,Tarik,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+anwar_201,$2b$12$AvnmdhhUr.eabFKQXLLZg.hs8eIi0C4Vrz5/v6KRazFFinSL3Wm6K,student,Muktijoddha Hall,201,Anwar,,,0.0,0,both,0,0,0,normal,normal,normal
+mahmudul_201,$2b$12$e1irBjCUgQWwbs8GVCtjlOeD5JeDOzGbNjIjGmGglS06icjxkjadq,student,Muktijoddha Hall,201,Mahmudul,,,0.0,0,both,0,0,0,normal,normal,normal
+shaharul_201,$2b$12$N8tS9aVkrhj5TcIvNLq3HOSwH5Dv2jrVPjTw7yDzO3tNz99C1op6q,student,Muktijoddha Hall,201,Shaharul,,,0.0,0,both,0,0,0,normal,egg_instead_of_fish,normal
+opu_202,$2b$12$h448sfWOS172LkaUKbG.iOXxFOk5LXSjlftJ5D8LpLsJkLdG3EeOq,student,Muktijoddha Hall,202,Opu,,,0.0,0,both,0,0,0,normal,normal,normal
+rajdeep_202,$2b$12$OKmxQwAFHV6LgGPYQ7GGlO9/MsNhwLJcDZTKICXzXo4DMoWUKAeYi,student,Muktijoddha Hall,202,Rajdeep,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,mutton
+zahid_202,$2b$12$tjr4q4J5FeORLMPhTmw0/uYhNkE16MRm0wDMJcmZ2QR5nOE2KNcwG,student,Muktijoddha Hall,202,Zahid,,,0.0,0,both,0,0,0,normal,normal,normal
+akash_203,$2b$12$VrVDIOIYeZCFLqvNWk.vTu4uWkU9s1JARtPMSTALhU16AuBB8tlGy,student,Muktijoddha Hall,203,Akash,,,0.0,0,both,0,0,0,normal,normal,mutton
+mahim_203,$2b$12$GVfPSD5Rdd6X4KWfAZUJt.GrheruztmAF4ws3odT0cPggp7sg4oHe,student,Muktijoddha Hall,203,Mahim,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+fabian_204,$2b$12$ITueToM37ePGt45kspfa4.K0nLY0D1jGbLtXrQMYXtuSqwX8NI5s6,student,Muktijoddha Hall,204,Fabian,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+fahim_204,$2b$12$/ESDu/rBuPk5iTmj37.INexlqeEK6M1PYUw38v9kyK7Z1wap54ABi,student,Muktijoddha Hall,204,Fahim,,,0.0,0,both,0,0,0,normal,normal,normal
+mostaq_204,$2b$12$9hwRIG65N0SZtPX6Ij2Ch.i6PZFf2wJrjd237hRcDzqVFpzpocc1u,student,Muktijoddha Hall,204,Mostaq,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+sumon_204,$2b$12$mUUprNrNNs2JHmtmR6gss.NNDyK3CIZzaaMtdAc40H9Tgx6AyW/HG,student,Muktijoddha Hall,204,Sumon,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
 bibek_205,$2b$12$C3YwXjvAKT4HDxxmx1.YYeD.KNwP5sUjlgx0ZVS.aujkVPuXGDeJS,student,Muktijoddha Hall,205,Bibek,,,0.0,0,both,0,0,0,normal,normal,mutton
 dhrubo_205,$2b$12$r1N8UhTkYK5EX6/59S6HQOXoD6Q//p1K0JP3omEbWQP6lWg4xNVl.,student,Muktijoddha Hall,205,Dhrubo,,,0.0,0,both,0,0,0,normal,normal,normal
-nayeem_205,$2b$12$cd4DO7VV1siU33zejNHR..vQI7OcyDWSjvze9fBpex8wvFv.x4z8q,student,Muktijoddha Hall,205,Nayeem,,,-48.029999999999994,0,both,0,0,0,normal,normal,normal
-bishal_206,$2b$12$sG3QL2vPoz5SDH3nIwBzjeKZH49.xtV.pHHExibCTpU0LHE4CxlKy,student,Muktijoddha Hall,206,Bishal,,,-5.970000000000027,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
-dip_206,$2b$12$xBlipwmyu01aLXynrcb/iueTUt3lwmttYStf2sU1FnXBAyGdClQm.,student,Muktijoddha Hall,206,Dip,,,-2.799999999999386,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
-rakib_206,$2b$12$v5mbtc1GpqlN2XMmSicWzu2jYB8jcAgQs0KFKuUaUPrlQEb.LNySC,student,Muktijoddha Hall,206,Rakib,,,-5.720000000000141,0,both,0,0,0,normal,normal,normal
-ridoy_206,$2b$12$cI57C4M4BKSSseyi2BAwgOs87OOFoTcoKCuGhooboFWoaFxneGxiK,student,Muktijoddha Hall,206,Ridoy,,,-2.799999999999727,0,both,0,0,0,normal,normal,mutton
-sahaf_206,$2b$12$3VPg780bB3qdGg6vM8oujeQM9Jh/Ml7ABLvEikk9XMx2NP/LY.GE2,student,Muktijoddha Hall,206,Sahaf,,,-0.1299999999997965,0,both,0,0,0,normal,normal,normal
+nayeem_205,$2b$12$cd4DO7VV1siU33zejNHR..vQI7OcyDWSjvze9fBpex8wvFv.x4z8q,student,Muktijoddha Hall,205,Nayeem,,,0.0,0,both,0,0,0,normal,normal,normal
+bishal_206,$2b$12$sG3QL2vPoz5SDH3nIwBzjeKZH49.xtV.pHHExibCTpU0LHE4CxlKy,student,Muktijoddha Hall,206,Bishal,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
+dip_206,$2b$12$xBlipwmyu01aLXynrcb/iueTUt3lwmttYStf2sU1FnXBAyGdClQm.,student,Muktijoddha Hall,206,Dip,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
+rakib_206,$2b$12$v5mbtc1GpqlN2XMmSicWzu2jYB8jcAgQs0KFKuUaUPrlQEb.LNySC,student,Muktijoddha Hall,206,Rakib,,,0.0,0,both,0,0,0,normal,normal,normal
+ridoy_206,$2b$12$cI57C4M4BKSSseyi2BAwgOs87OOFoTcoKCuGhooboFWoaFxneGxiK,student,Muktijoddha Hall,206,Ridoy,,,0.0,0,both,0,0,0,normal,normal,mutton
+sahaf_206,$2b$12$3VPg780bB3qdGg6vM8oujeQM9Jh/Ml7ABLvEikk9XMx2NP/LY.GE2,student,Muktijoddha Hall,206,Sahaf,,,0.0,0,both,0,0,0,normal,normal,normal
 ayon_207,$2b$12$W/Un/HXSw.cPOeD3bm0b5.6x2ohpW5c4RQC1VAuZOCTAWqxdKSbQO,student,Muktijoddha Hall,207,Ayon,,,0.0,0,both,0,0,0,normal,normal,normal
-mahadi_207,$2b$12$IAfP1BXeH4W0SgH0Y..MkenlYaWgLfK9dd2VfnCor7YRevn48d0uO,student,Muktijoddha Hall,207,Mahadi,,,2.1800000000002138,0,both,0,0,0,normal,normal,normal
-moaj_207,$2b$12$xG/rh137v2t7hnbG0C3vOub5k7kQ6NyoEJUZ4eSpipnFAIRuT.98O,student,Muktijoddha Hall,207,Moaj,,,5.250000000000568,0,both,0,0,0,normal,normal,normal
+mahadi_207,$2b$12$IAfP1BXeH4W0SgH0Y..MkenlYaWgLfK9dd2VfnCor7YRevn48d0uO,student,Muktijoddha Hall,207,Mahadi,,,0.0,0,both,0,0,0,normal,normal,normal
+moaj_207,$2b$12$xG/rh137v2t7hnbG0C3vOub5k7kQ6NyoEJUZ4eSpipnFAIRuT.98O,student,Muktijoddha Hall,207,Moaj,,,0.0,0,both,0,0,0,normal,normal,normal
 towhid_207,$2b$12$oDnpl3TA.WBdlVX5WnwdZO.DHpFwrQNYfLPnwplG0oQASH.JGKeee,student,Muktijoddha Hall,207,Towhid,,,0.0,0,both,0,0,0,normal,normal,normal
-kadir_208,kadir_208,student,Muktijoddha Hall,208,Kadir,,,-1414.8100000000006,0,,0,0,0,,,
-sadid_208,$2b$12$0y2D5UrOFU5/nowWTYiflOWT5qMsQGXAzgLfcWrR4OP5eWgC52FnW,student,Muktijoddha Hall,208,Sadid,,,-7.239999999999782,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-sajib_208,$2b$12$a0VSPGMNmZs1jstxWM.CM.1kEFz7FZ02Lni2zjpH30k0Prd6H5GGa,student,Muktijoddha Hall,208,Sajib,,,-7.960000000000036,0,both,0,0,0,normal,normal,mutton
-nasir_209,$2b$12$j8g9hWn9W6z5GDoQoKx29.ZzmmZI2kVts.sXNF94lCY6qRsOIlxRi,student,Muktijoddha Hall,209,Nasir,,,-97.55000000000017,0,both,0,0,0,normal,normal,mutton
-raj_209,$2b$12$q/xU8P7wLOWmqHQVzP42deEdtjNczxavaF50Y6h4wPX/s8PsZ1HGq,student,Muktijoddha Hall,209,Raj,,,1.5799999999998136,0,both,0,0,0,normal,normal,normal
-sazid_209,$2b$12$WYbg9n1OYAyM1tOI343JoOUMBTsifSgPE9Qs8zG6RO.ibWwG4JVmW,student,Muktijoddha Hall,209,Sazid,,,102.18999999999984,0,both,0,0,0,normal,normal,normal
-anik_210,$2b$12$THb0P/nfHSJT134QYEp80exE6uP.gbM3yS0m6LTc14DmQTKCDEek6,student,Muktijoddha Hall,210,Anik,,,-4.35000000000008,0,both,0,0,0,normal,normal,normal
-antor_210,$2b$12$.3iUJr8ecw6g8DmpDhdaAuAyS1OIk0twLG3DON.umtuFfcbj06EFe,student,Muktijoddha Hall,210,Antor,,,4.28999999999985,0,both,0,0,0,normal,normal,normal
-dweep_210,dweep_210,student,Muktijoddha Hall,210,Dweep,,,-797.8608325370824,0,,0,0,0,,,mutton
-israfil_210,$2b$12$vO6XZZHk0DvUlG0rwNYPluz8NVqIXHLAxhO7.rnwvXJ4//B0OQN4C,student,Muktijoddha Hall,210,Israfil,,,-5.040000000000305,0,both,0,0,0,normal,normal,normal
-jihad_210,$2b$12$ein9kKH6pwO8NdADG2oJpuN4bwbsdqMX6tZnTWik3/uZ2pB3niTqi,student,Muktijoddha Hall,210,Jihad,,,-9.829999999999558,0,both,0,0,0,normal,normal,normal
-koushik_210,$2b$12$KkQTBNSWRckCNmb5r802zeai7.UxojU3AhX2KIpbHxo2lD4r.qyx2,student,Muktijoddha Hall,210,Koushik,,,-8.110000000000014,0,both,0,0,0,normal,normal,mutton
-mahedi_210,$2b$12$Z6PP9lQzSERVvCQMKg6FX.boiIndD4paf4EKNlwypTWFIN.0dQEai,student,Muktijoddha Hall,210,Mahedi,,,-167.75,0,both,0,0,0,normal,normal,normal
-mahi_210,$2b$12$pIipdZX4aDXfRjn4ZQ2uUuLonzWHtl3YFXyOGbAepeAaoAu.8zmTC,student,Muktijoddha Hall,210,Mahi,,,2.85000000000025,0,both,0,0,0,normal,normal,normal
-mustakim_210,$2b$12$wWH2UDW0NtLkpOA2F20v7.aCKawzdeA1848IzJAU973WF.LmXHaOS,student,Muktijoddha Hall,210,Mustakim,,,-19.774186302880253,0,both,0,0,0,normal,normal,normal
-nafis_210,$2b$12$H0rqWwY4ixCZQ4vm0x/4veaFEpkZAT9lNCENNI5ADMBDnvDzLm/x.,student,Muktijoddha Hall,210,Nafis,,,-8.520000000000024,0,both,0,0,0,normal,normal,normal
-prince_210,$2b$12$1Ef68Qrru6jFf5wRtmS.gez47Wo05YGeK7pmuX.WFTl5TEW10doIi,student,Muktijoddha Hall,210,Prince,,,-3.099999999999625,0,both,0,0,0,normal,normal,normal
-rafiz_210,$2b$12$GXRob5urTUrESrkIO4C.Puzf94LH.btuGM4IJZjSvHkxtFk/Xf5va,student,Muktijoddha Hall,210,Rafiz,,,-7.929999999999836,0,both,0,0,0,normal,normal,normal
-rahat_210,$2b$12$L85NP.qiQqQGAG/TQVnRauCg0dEZAoKlU/gq7BmTxdrIh1lUPQt7S,student,Muktijoddha Hall,210,Rahat,,,-3.8500000000000796,0,both,0,0,0,normal,egg_instead_of_fish,normal
-ruhulamin_210,$2b$12$187/d1QRC4QECUYNp2iIveSs6oPL/6nea8ipl6C9I7d3pxa.EUxS2,student,Muktijoddha Hall,210,Ruhulamin,,,-3.279999999999518,0,both,0,0,0,normal,normal,normal
-samit_210,$2b$12$1fRgoVDlBIelEi1BXHFtieFESH/5naNMl.vWrUmIcqMCxTfDtp/w.,student,Muktijoddha Hall,210,Samit,,,-6.610000000000156,0,both,0,0,0,normal,normal,normal
-samiul_210,$2b$12$NJFgzA1N2haRci6z0rUe6OagQ7CBX/eRkyAMCEnCvZM/E1bVb2MGu,student,Muktijoddha Hall,210,Samiul,,,-4.919999999999902,0,both,0,0,0,normal,normal,normal
-sazzad_210,$2b$12$.1dtfW2iIGd0XFaHsKk4/uS9vYJEPjIWbjUIjo7QQ5YwhrqWVyg/S,student,Muktijoddha Hall,210,Sazzad,,,212.33000000000098,0,both,0,0,0,normal,normal,normal
-shopnil_210,$2b$12$q2n.x91Hg/Q4ISdY9QRgyu9I82YOTWIzLq2LYb.0gYACaAAGAAUu.,student,Muktijoddha Hall,210,Shopnil,,,-8.970000000000084,0,both,0,0,0,normal,normal,mutton
-siddique_210,$2b$12$SOzU/JcCPiNdm2aCioHqv.KofQh6CDPWkoLEZULbRhAUDBRqPTW/q,student,Muktijoddha Hall,210,Siddique,,,-9.869999999999692,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-surakabil_210,$2b$12$n5hKMxhjGJXHUrhm9WKiZeSZkL/MINerWUe4ZKZYOWOvgNnqcLehW,student,Muktijoddha Hall,210,Surakabil,,,5.110000000000582,0,both,0,0,0,normal,normal,normal
-utsha_210,$2b$12$jpO7jcV0cMXI2ItgbAkwW.VdcoRR/WGKB/PzpORcEBsdFbNv/u/FG,student,Muktijoddha Hall,210,Utsha,,,-3.210000000000079,0,both,0,0,0,normal,normal,normal
-zakir_210,$2b$12$GSOVG0j0/bEbNjJuiT/PTuhO4pPDBw85R2th8I9h3U0EeNEu1ABA6,student,Muktijoddha Hall,210,Zakir,,,-11.440000000000055,0,both,0,0,0,normal,normal,normal
-amit_301,$2b$12$hP1vDezsEogxPS6A5w0NAuAmALgeakyfcxXj7IVQQICfQK7fHwvzC,student,Muktijoddha Hall,301,Amit,,,-6.894186302880527,0,both,0,0,0,normal,normal,mutton
-ashik_301,$2b$12$gMTehYeE0Oyg7FcxbEBGS.kDoS9Im568cPqq8fB8pkh0C4Eh9L1AS,student,Muktijoddha Hall,301,Ashik,,,-3.639999999999759,0,both,0,0,0,normal,normal,normal
-mishbah_301,$2b$12$5jgFDT2qYDKUxY0qEThCgeV87NssWBElYhHBdhu0Ch8JZZm5S60Fa,student,Muktijoddha Hall,301,Mishbah,,,-15.680000000000689,0,both,0,0,0,normal,normal,normal
-shaon_301,$2b$12$9lRda9hXm7ntWnDwrqlHNuMmhFZWL4yF/CGd890Y2wxk2EaWeE8xq,student,Muktijoddha Hall,301,Shaon,,,3.740000000000009,0,both,0,0,0,normal,normal,normal
-asif_302,$2b$12$YO6Va0a0/.016rZNZlXd7.66YeBexQa6/ZzRxyPkCUINy1nN0gOFy,student,Muktijoddha Hall,302,Asif,,,-6.92999999999995,0,both,0,0,0,normal,normal,normal
-mehedi_302,$2b$12$od1bOEDrx3qaMBZan6h4j.9DKgyk.VM7FSKJWQDKjaaIIWF.LrrMy,student,Muktijoddha Hall,302,Mehedi,,,-7.0600000000004,0,both,0,0,0,normal,normal,normal
-riam_302,$2b$12$UDA14fMxeNQ85iIkJjagdefmYY.09Wv16fVLlumX/4DZ0kREKSOBK,student,Muktijoddha Hall,302,Riam,,,-649.9399999999994,0,both,0,0,0,normal,normal,normal
-shaon_302,$2b$12$C7jaLVKvQxkcRUl4gbFey.lJZqfYcnnDwTI3jtW20.q.0E4v6dsq2,student,Muktijoddha Hall,302,Shaon,,,-7.599999999999909,0,both,0,0,0,normal,normal,normal
+kadir_208,$2b$12$TWyYiHtwSPeh3vIh3RlUZ.ySO2kZ3aP4XbnWo9q9D9F7boNd5IuoW,student,Muktijoddha Hall,208,Kadir,,,0.0,0,both,0,0,0,normal,normal,normal
+sadid_208,$2b$12$0y2D5UrOFU5/nowWTYiflOWT5qMsQGXAzgLfcWrR4OP5eWgC52FnW,student,Muktijoddha Hall,208,Sadid,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+sajib_208,$2b$12$a0VSPGMNmZs1jstxWM.CM.1kEFz7FZ02Lni2zjpH30k0Prd6H5GGa,student,Muktijoddha Hall,208,Sajib,,,0.0,0,both,0,0,0,normal,normal,mutton
+nasir_209,$2b$12$j8g9hWn9W6z5GDoQoKx29.ZzmmZI2kVts.sXNF94lCY6qRsOIlxRi,student,Muktijoddha Hall,209,Nasir,,,0.0,0,both,0,0,0,normal,normal,mutton
+raj_209,$2b$12$q/xU8P7wLOWmqHQVzP42deEdtjNczxavaF50Y6h4wPX/s8PsZ1HGq,student,Muktijoddha Hall,209,Raj,,,0.0,0,both,0,0,0,normal,normal,normal
+sazid_209,$2b$12$WYbg9n1OYAyM1tOI343JoOUMBTsifSgPE9Qs8zG6RO.ibWwG4JVmW,student,Muktijoddha Hall,209,Sazid,,,0.0,0,both,0,0,0,normal,normal,normal
+anik_210,$2b$12$THb0P/nfHSJT134QYEp80exE6uP.gbM3yS0m6LTc14DmQTKCDEek6,student,Muktijoddha Hall,210,Anik,,,0.0,0,both,0,0,0,normal,normal,normal
+antor_210,$2b$12$.3iUJr8ecw6g8DmpDhdaAuAyS1OIk0twLG3DON.umtuFfcbj06EFe,student,Muktijoddha Hall,210,Antor,,,0.0,0,both,0,0,0,normal,normal,normal
+dweep_210,$2b$12$BYoUlFplhWGF/ZlXUjNmJejqve.qG4k.WItvnJpMDKYaW5xRiQ2x6,student,Muktijoddha Hall,210,Dweep,,,0.0,0,both,0,0,0,normal,normal,mutton
+israfil_210,$2b$12$vO6XZZHk0DvUlG0rwNYPluz8NVqIXHLAxhO7.rnwvXJ4//B0OQN4C,student,Muktijoddha Hall,210,Israfil,,,0.0,0,both,0,0,0,normal,normal,normal
+jihad_210,$2b$12$ein9kKH6pwO8NdADG2oJpuN4bwbsdqMX6tZnTWik3/uZ2pB3niTqi,student,Muktijoddha Hall,210,Jihad,,,0.0,0,both,0,0,0,normal,normal,normal
+koushik_210,$2b$12$KkQTBNSWRckCNmb5r802zeai7.UxojU3AhX2KIpbHxo2lD4r.qyx2,student,Muktijoddha Hall,210,Koushik,,,0.0,0,both,0,0,0,normal,normal,mutton
+mahedi_210,$2b$12$Z6PP9lQzSERVvCQMKg6FX.boiIndD4paf4EKNlwypTWFIN.0dQEai,student,Muktijoddha Hall,210,Mahedi,,,0.0,0,both,0,0,0,normal,normal,normal
+mahi_210,$2b$12$pIipdZX4aDXfRjn4ZQ2uUuLonzWHtl3YFXyOGbAepeAaoAu.8zmTC,student,Muktijoddha Hall,210,Mahi,,,0.0,0,both,0,0,0,normal,normal,normal
+mustakim_210,$2b$12$wWH2UDW0NtLkpOA2F20v7.aCKawzdeA1848IzJAU973WF.LmXHaOS,student,Muktijoddha Hall,210,Mustakim,,,0.0,0,both,0,0,0,normal,normal,normal
+nafis_210,$2b$12$H0rqWwY4ixCZQ4vm0x/4veaFEpkZAT9lNCENNI5ADMBDnvDzLm/x.,student,Muktijoddha Hall,210,Nafis,,,0.0,0,both,0,0,0,normal,normal,normal
+prince_210,$2b$12$1Ef68Qrru6jFf5wRtmS.gez47Wo05YGeK7pmuX.WFTl5TEW10doIi,student,Muktijoddha Hall,210,Prince,,,0.0,0,both,0,0,0,normal,normal,normal
+rafiz_210,$2b$12$GXRob5urTUrESrkIO4C.Puzf94LH.btuGM4IJZjSvHkxtFk/Xf5va,student,Muktijoddha Hall,210,Rafiz,,,0.0,0,both,0,0,0,normal,normal,normal
+rahat_210,$2b$12$L85NP.qiQqQGAG/TQVnRauCg0dEZAoKlU/gq7BmTxdrIh1lUPQt7S,student,Muktijoddha Hall,210,Rahat,,,0.0,0,both,0,0,0,normal,egg_instead_of_fish,normal
+ruhulamin_210,$2b$12$187/d1QRC4QECUYNp2iIveSs6oPL/6nea8ipl6C9I7d3pxa.EUxS2,student,Muktijoddha Hall,210,Ruhulamin,,,0.0,0,both,0,0,0,normal,normal,normal
+samit_210,$2b$12$1fRgoVDlBIelEi1BXHFtieFESH/5naNMl.vWrUmIcqMCxTfDtp/w.,student,Muktijoddha Hall,210,Samit,,,0.0,0,both,0,0,0,normal,normal,normal
+samiul_210,$2b$12$NJFgzA1N2haRci6z0rUe6OagQ7CBX/eRkyAMCEnCvZM/E1bVb2MGu,student,Muktijoddha Hall,210,Samiul,,,0.0,0,both,0,0,0,normal,normal,normal
+sazzad_210,$2b$12$.1dtfW2iIGd0XFaHsKk4/uS9vYJEPjIWbjUIjo7QQ5YwhrqWVyg/S,student,Muktijoddha Hall,210,Sazzad,,,0.0,0,both,0,0,0,normal,normal,normal
+shopnil_210,$2b$12$q2n.x91Hg/Q4ISdY9QRgyu9I82YOTWIzLq2LYb.0gYACaAAGAAUu.,student,Muktijoddha Hall,210,Shopnil,,,0.0,0,both,0,0,0,normal,normal,mutton
+siddique_210,$2b$12$SOzU/JcCPiNdm2aCioHqv.KofQh6CDPWkoLEZULbRhAUDBRqPTW/q,student,Muktijoddha Hall,210,Siddique,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+surakabil_210,$2b$12$n5hKMxhjGJXHUrhm9WKiZeSZkL/MINerWUe4ZKZYOWOvgNnqcLehW,student,Muktijoddha Hall,210,Surakabil,,,0.0,0,both,0,0,0,normal,normal,normal
+utsha_210,$2b$12$jpO7jcV0cMXI2ItgbAkwW.VdcoRR/WGKB/PzpORcEBsdFbNv/u/FG,student,Muktijoddha Hall,210,Utsha,,,0.0,0,both,0,0,0,normal,normal,normal
+zakir_210,$2b$12$GSOVG0j0/bEbNjJuiT/PTuhO4pPDBw85R2th8I9h3U0EeNEu1ABA6,student,Muktijoddha Hall,210,Zakir,,,0.0,0,both,0,0,0,normal,normal,normal
+amit_301,$2b$12$hP1vDezsEogxPS6A5w0NAuAmALgeakyfcxXj7IVQQICfQK7fHwvzC,student,Muktijoddha Hall,301,Amit,,,0.0,0,both,0,0,0,normal,normal,mutton
+ashik_301,$2b$12$gMTehYeE0Oyg7FcxbEBGS.kDoS9Im568cPqq8fB8pkh0C4Eh9L1AS,student,Muktijoddha Hall,301,Ashik,,,0.0,0,both,0,0,0,normal,normal,normal
+mishbah_301,$2b$12$5jgFDT2qYDKUxY0qEThCgeV87NssWBElYhHBdhu0Ch8JZZm5S60Fa,student,Muktijoddha Hall,301,Mishbah,,,0.0,0,both,0,0,0,normal,normal,normal
+shaon_301,$2b$12$9lRda9hXm7ntWnDwrqlHNuMmhFZWL4yF/CGd890Y2wxk2EaWeE8xq,student,Muktijoddha Hall,301,Shaon,,,0.0,0,both,0,0,0,normal,normal,normal
+asif_302,$2b$12$YO6Va0a0/.016rZNZlXd7.66YeBexQa6/ZzRxyPkCUINy1nN0gOFy,student,Muktijoddha Hall,302,Asif,,,0.0,0,both,0,0,0,normal,normal,normal
+mehedi_302,$2b$12$od1bOEDrx3qaMBZan6h4j.9DKgyk.VM7FSKJWQDKjaaIIWF.LrrMy,student,Muktijoddha Hall,302,Mehedi,,,0.0,0,both,0,0,0,normal,normal,normal
+riam_302,$2b$12$UDA14fMxeNQ85iIkJjagdefmYY.09Wv16fVLlumX/4DZ0kREKSOBK,student,Muktijoddha Hall,302,Riam,,,0.0,0,both,0,0,0,normal,normal,normal
+shaon_302,$2b$12$C7jaLVKvQxkcRUl4gbFey.lJZqfYcnnDwTI3jtW20.q.0E4v6dsq2,student,Muktijoddha Hall,302,Shaon,,,0.0,0,both,0,0,0,normal,normal,normal
 bappy_303,$2b$12$ZNJGH0g5xgzhjNLtSUiQ2eFnyiv6e.XRQ0kkFCE2zJbYZlqcrw.Ca,student,Muktijoddha Hall,303,Bappy,,,0.0,0,both,0,0,0,normal,normal,normal
-iftekher_303,$2b$12$BvtEbGKCtueTKcVQnpFXFOa7tWCGxpxYhSHWbdUPNY5WRi/aN3qNa,student,Muktijoddha Hall,303,Iftekher,,,-8.19999999999925,0,both,0,0,0,normal,normal,normal
-rafi_303,$2b$12$BwhdlfRElPmDz17SmHSkSeDsBg/3dRW7VXO5mSnuqlBnxHG8r1WIy,student,Muktijoddha Hall,303,Rafi,,,-6.369999999999607,0,both,0,0,0,normal,normal,normal
-shadhin_303,$2b$12$JysJmG/v/UEONX35BJZaqeF9g7h7u/jymcmSLX.xujqdaP6qJFpzO,student,Muktijoddha Hall,303,Shadhin,,,1.8000000000002387,0,both,0,0,0,normal,normal,normal
-mujammel_304,$2b$12$BVEpx0xzu0N54ZN4wEIYMeXysRZ3dKS47fwV1Jqjd0zv7DaYd3QIq,student,Muktijoddha Hall,304,Mujammel,,,-13.974186302879616,0,both,0,0,0,normal,normal,normal
-sagor_304,$2b$12$KaWbX6bdcKmd/BDImiMxHe.AL2lC4MFBp./JMOA9hg2VGzAMr56jK,student,Muktijoddha Hall,304,Sagor,,,-77.31418630288015,0,both,0,0,0,normal,normal,normal
-shahriar_304,$2b$12$l5XH4NpEago3kR.8iAMLlOjfXqqqsETOMRucfSsoHRN4ozsq3NPuu,student,Muktijoddha Hall,304,Shahriar,,,-4.590000000000089,0,both,0,0,0,normal,normal,normal
-mufakkarul_305,$2b$12$MZyuYUEtowD1cmzZ1U3OXuZJfwWVu8WZmgtGpvu6C9MI7hryc/Eqi,student,Muktijoddha Hall,305,Mufakkarul,,,-5.599999999999454,0,both,0,0,0,normal,normal,normal
-talal_305,$2b$12$bo5p83rUaujNldwSAXnnsuYZbxmkpEu/3z0lEPvNU90SLsl1GBsXS,student,Muktijoddha Hall,305,Talal,,,-6.9399999999996,0,both,0,0,0,normal,egg_instead_of_fish,normal
-tamim_305,$2b$12$YXugChGb/2wodTPsnVTpJe1.G46Lem4HiS1M2iZR5Lijml914aBqi,student,Muktijoddha Hall,305,Tamim,,,-10.119999999999948,0,both,0,0,0,normal,normal,normal
-abir_306,$2b$12$.AfSrVzCP9iJB1ZZZev8K.SuVbW.dbDorvihuEbK.g0TgeAQnSEA2,student,Muktijoddha Hall,306,Abir,,,-301.20000000000016,0,both,0,0,0,normal,normal,normal
-nahid_306,$2b$12$cQUaEesfGQsJRJ9c3k256.ojpwFKHZvyWqP1Ifv5O3I9lcCj03PSy,student,Muktijoddha Hall,306,Nahid,,,-3.459999999999752,0,both,0,0,0,normal,normal,normal
-sabbir_306,$2b$12$OYQPrsgC.C9HLIh6bDzzVejYLAP5bOgvVb9/vrpMAxKqwr0K5/HN2,student,Muktijoddha Hall,306,Sabbir,,,-9.459999999999582,0,both,0,0,0,egg_instead_of_fish,if_pangas_then_egg,normal
-sakib_306,$2b$12$ePLWEjC9LjxMykBw/M4Dx.fy/jo2ap7TPjBcGV76vDXTYDH/TaZ5q,student,Muktijoddha Hall,306,Sakib,,,-11.310000000000002,0,both,0,0,0,normal,normal,normal
+iftekher_303,$2b$12$BvtEbGKCtueTKcVQnpFXFOa7tWCGxpxYhSHWbdUPNY5WRi/aN3qNa,student,Muktijoddha Hall,303,Iftekher,,,0.0,0,both,0,0,0,normal,normal,normal
+rafi_303,$2b$12$BwhdlfRElPmDz17SmHSkSeDsBg/3dRW7VXO5mSnuqlBnxHG8r1WIy,student,Muktijoddha Hall,303,Rafi,,,0.0,0,both,0,0,0,normal,normal,normal
+shadhin_303,$2b$12$JysJmG/v/UEONX35BJZaqeF9g7h7u/jymcmSLX.xujqdaP6qJFpzO,student,Muktijoddha Hall,303,Shadhin,,,0.0,0,both,0,0,0,normal,normal,normal
+mujammel_304,$2b$12$BVEpx0xzu0N54ZN4wEIYMeXysRZ3dKS47fwV1Jqjd0zv7DaYd3QIq,student,Muktijoddha Hall,304,Mujammel,,,0.0,0,both,0,0,0,normal,normal,normal
+sagor_304,$2b$12$KaWbX6bdcKmd/BDImiMxHe.AL2lC4MFBp./JMOA9hg2VGzAMr56jK,student,Muktijoddha Hall,304,Sagor,,,0.0,0,both,0,0,0,normal,normal,normal
+shahriar_304,$2b$12$l5XH4NpEago3kR.8iAMLlOjfXqqqsETOMRucfSsoHRN4ozsq3NPuu,student,Muktijoddha Hall,304,Shahriar,,,0.0,0,both,0,0,0,normal,normal,normal
+mufakkarul_305,$2b$12$MZyuYUEtowD1cmzZ1U3OXuZJfwWVu8WZmgtGpvu6C9MI7hryc/Eqi,student,Muktijoddha Hall,305,Mufakkarul,,,0.0,0,both,0,0,0,normal,normal,normal
+talal_305,$2b$12$bo5p83rUaujNldwSAXnnsuYZbxmkpEu/3z0lEPvNU90SLsl1GBsXS,student,Muktijoddha Hall,305,Talal,,,0.0,0,both,0,0,0,normal,egg_instead_of_fish,normal
+tamim_305,$2b$12$YXugChGb/2wodTPsnVTpJe1.G46Lem4HiS1M2iZR5Lijml914aBqi,student,Muktijoddha Hall,305,Tamim,,,0.0,0,both,0,0,0,normal,normal,normal
+abir_306,$2b$12$.AfSrVzCP9iJB1ZZZev8K.SuVbW.dbDorvihuEbK.g0TgeAQnSEA2,student,Muktijoddha Hall,306,Abir,,,0.0,0,both,0,0,0,normal,normal,normal
+nahid_306,$2b$12$cQUaEesfGQsJRJ9c3k256.ojpwFKHZvyWqP1Ifv5O3I9lcCj03PSy,student,Muktijoddha Hall,306,Nahid,,,0.0,0,both,0,0,0,normal,normal,normal
+sabbir_306,$2b$12$OYQPrsgC.C9HLIh6bDzzVejYLAP5bOgvVb9/vrpMAxKqwr0K5/HN2,student,Muktijoddha Hall,306,Sabbir,,,0.0,0,both,0,0,0,egg_instead_of_fish,if_pangas_then_egg,normal
+sakib_306,$2b$12$ePLWEjC9LjxMykBw/M4Dx.fy/jo2ap7TPjBcGV76vDXTYDH/TaZ5q,student,Muktijoddha Hall,306,Sakib,,,0.0,0,both,0,0,0,normal,normal,normal
 adnan_307,$2b$12$rdqCsb96rtwP71xmmR8QFe3OmYc6gWnxV4O1oE59AtVsXsIf/.W0i,student,Muktijoddha Hall,307,Adnan,,,0.0,0,both,0,0,0,normal,normal,normal
-riyad_307,$2b$12$8ypTFIsX59zfBtokPL6OgORitAy5KvMEHuJI3M6XVll8M8G20Za8q,student,Muktijoddha Hall,307,Riyad,,,-3.819999999999709,0,both,0,0,0,normal,normal,normal
-sakib_307,$2b$12$GGuGdEk20HI3uR9D1fRmnOCbJKjOpTsFvi89FaShn2f6.7qjQGZj2,student,Muktijoddha Hall,307,Sakib,,,-4.07000000000005,0,both,0,0,0,normal,normal,normal
-topon_307,$2b$12$ZqQWt25/2oHLMR6JicRI3.kD6z6cMBoIhNCsQkN4W7queCWVrmfEi,student,Muktijoddha Hall,307,Topon,,,-11.599999999999454,0,both,0,0,0,normal,normal,mutton
-fuad_308,$2b$12$bKeSyHAlpS2K3f5YhXqZfeZK38Twog4h6FHw607v.mRwTI0hEwIYS,student,Muktijoddha Hall,308,Fuad,,,-441.5199999999999,0,both,0,0,0,normal,normal,normal
-koushikvai_308,$2b$12$Z4wKBUI3FkfmHEcfTnZsNudAc3xD3plhOG3fFg8D01x6H5ocZ3AO2,student,Muktijoddha Hall,308,Koushikvai,,,-399.46,0,both,0,0,0,normal,normal,normal
-rezone_308,$2b$12$JLRN3Vx1jZK..80vKLU22eexohOikPGbJkoAum/INrReknNjmjAse,student,Muktijoddha Hall,308,Rezone,,,-1.7699999999997544,0,both,0,0,0,normal,normal,normal
-rokon_308,$2b$12$VhHcnWgOBUAjFem67JpMD.uN37nPr7lqmQB9qr2eW9Ea2BPQQAEcG,student,Muktijoddha Hall,308,Rokon,,,-223.95000000000002,0,both,0,0,0,normal,normal,normal
-azam_309,$2b$12$E/4m5MmCml95hSpTGrgT/.T5K5OgS11nCBXwf3ZuxtP0dxgoe9qJa,student,Muktijoddha Hall,309,Azam,,,-10.269999999999982,0,both,0,0,0,normal,normal,normal
-chisty_309,chisty_309,student,Muktijoddha Hall,309,Chisty,,,-4.990000000000066,0,,0,0,0,,,
-murad_309,$2b$12$N9R5I3JVlWpLRqIzqalTYO/I9XwgCnYMLoKcaanzRm5LLIzvvSdGC,student,Muktijoddha Hall,309,Murad,,,148.5399999999999,0,both,0,0,0,normal,normal,normal
-shovon_309,$2b$12$0ot3mobk67MBJbrMk6y89eYn49bAJgEARwC4jk45uZnOGVgDlBe.2,student,Muktijoddha Hall,309,Shovon,,,-1.1900000000000546,0,both,0,0,0,normal,normal,normal
-tamim_309,$2b$12$32holRx516MOPoHmyLNaSOEjx/qBnfpnbOI0m5ZmSNai7HEicF.6.,student,Muktijoddha Hall,309,Tamim,,,-9.999999999999886,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-rana_401,$2b$12$YcEM/1ggjYefcgbTV4qI/eONAgoXGZkwzyyUyyCBUiB.rmK/rFLyi,student,Muktijoddha Hall,401,Rana,,,-12.96073610116946,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-sani_401,$2b$12$xxBS1olzatL9mu3jDX6GG.J44y6g7E5o4CF8CHWB7Le/xNh0vDG.i,student,Muktijoddha Hall,401,Sani,,,-8.989999999999782,0,both,0,0,0,normal,normal,normal
-tamjid_401,$2b$12$ZEzsm66qWXw8h6/yw2tWs.5RCbf5eUvLKCAg24A18UbbRVdXkIRwu,student,Muktijoddha Hall,401,Tamjid,,,3.079999999999899,0,both,0,0,0,normal,normal,normal
-ashraf_402,$2b$12$.wjwhEpTIPDrJo0hpC/Fdez6Sxgp8UrdN8Cl2/pgUQNtH1oTlNCR2,student,Muktijoddha Hall,402,Ashraf,,,-6.659999999999968,0,both,0,0,0,normal,normal,normal
-asif_402,$2b$12$E/6bcg1mfQxHKxgIa5R0oOviHQKAHaOiYXdkiu3D/SM8FvxlVnBjW,student,Muktijoddha Hall,402,Asif,,,7.71000000000015,0,both,0,0,0,normal,normal,normal
-mubin_402,$2b$12$kDHTkBeE5cTp1wPNDfi6Suc0AR.8gecSvIs4Z0QCYqde1f62lv9Z6,student,Muktijoddha Hall,402,Mubin,,,0.9899999999997817,0,both,0,0,0,normal,normal,mutton
-yamin_402,$2b$12$J7UzHwWkDEUCPDh2zz0j3eKqu4DUHiSP.qV7Or6fMrHoQk8sK5/ZC,student,Muktijoddha Hall,402,Yamin,,,-5.05999999999996,0,both,0,0,0,normal,normal,normal
-efty_403,$2b$12$/OR.pRdUhZBjYdJHkPbh2.fmMB2MlEjMIeCpRFdeJ8cq5Q6xrs0dC,student,Muktijoddha Hall,403,Efty,,,0.36999999999991817,0,both,0,0,0,normal,normal,normal
-mursalin_403,mursalin_403,student,Muktijoddha Hall,403,Mursalin,,,-3.410000000000025,0,,0,0,0,,,
-rajib_403,$2b$12$1Dv0U513hEZrwiTTUzPHn.YnNRBUvfPf2T1WrEGm3uJQ7B5pI3.Rm,student,Muktijoddha Hall,403,Rajib,,,620.4200000000001,0,both,0,0,0,normal,egg_instead_of_fish,normal
-topu_403,$2b$12$jMZ/Yq9CS/oq.4b084Z/Gu3ni1RTLHjrNaFxhvqJZ5BjKQbebK2FO,student,Muktijoddha Hall,403,Topu,,,-3.099999999999568,0,both,0,0,0,normal,normal,mutton
-jihad_404,$2b$12$.o4zXAIfiFp5ngDqgddD4ueAT70FDEcWxGX3e8SlR9NbBaEaS18pu,student,Muktijoddha Hall,404,Jihad,,,-27.550000000000182,0,both,0,0,0,normal,normal,normal
-sadman_404,$2b$12$Kz/2pcRn4PYjgbX5yZaXKO5TT4RSvf8rTpbOsK3Ci/vxsUgp37vm2,student,Muktijoddha Hall,404,Sadman,,sadmanrahman40@gmail.com,-507.62000000000035,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-saif_404,$2b$12$phg6IFEoNBD5Ure5o0Fq8OIKanMUejJz/RZQQlGr00GeybZ0iYWze,student,Muktijoddha Hall,404,Saif,,,-589.9299999999998,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-hamidul_405,$2b$12$XVlc4MaxmgNOr.xNdCw9tOQU7hg1PQCxj30GVKOViGmOxcNbXn9Fa,student,Muktijoddha Hall,405,Hamidul,,,-4.699999999999989,0,both,0,0,0,normal,normal,normal
-sanaullah_405,$2b$12$f2xFGPpWHns.uZD3DmaZs.7MeCuFlAKDfjPnJGpqOy/c.dA5ujuh2,student,Muktijoddha Hall,405,Sanaullah,,,7.250000000000682,0,both,0,0,0,normal,normal,normal
-selim_405,$2b$12$IxPwlHw7VELXD7LwUFnK3uyZLmuQledleW3T7jj1E.96Y.JJiRNbS,student,Muktijoddha Hall,405,Selim,,,-12.059999999999832,0,both,0,0,0,normal,normal,normal
-shubham_405,$2b$12$IZlDn5qXzLedxf/JPxxTU.diYgnYe6Pyzc/dqIGkd4yFlvjjwowQe,student,Muktijoddha Hall,405,Shubham,,,-7.750000000000114,0,both,0,0,0,normal,normal,mutton
+riyad_307,$2b$12$8ypTFIsX59zfBtokPL6OgORitAy5KvMEHuJI3M6XVll8M8G20Za8q,student,Muktijoddha Hall,307,Riyad,,,0.0,0,both,0,0,0,normal,normal,normal
+sakib_307,$2b$12$GGuGdEk20HI3uR9D1fRmnOCbJKjOpTsFvi89FaShn2f6.7qjQGZj2,student,Muktijoddha Hall,307,Sakib,,,0.0,0,both,0,0,0,normal,normal,normal
+topon_307,$2b$12$ZqQWt25/2oHLMR6JicRI3.kD6z6cMBoIhNCsQkN4W7queCWVrmfEi,student,Muktijoddha Hall,307,Topon,,,0.0,0,both,0,0,0,normal,normal,mutton
+fuad_308,$2b$12$bKeSyHAlpS2K3f5YhXqZfeZK38Twog4h6FHw607v.mRwTI0hEwIYS,student,Muktijoddha Hall,308,Fuad,,,0.0,0,both,0,0,0,normal,normal,normal
+koushikvai_308,$2b$12$Z4wKBUI3FkfmHEcfTnZsNudAc3xD3plhOG3fFg8D01x6H5ocZ3AO2,student,Muktijoddha Hall,308,Koushikvai,,,0.0,0,both,0,0,0,normal,normal,normal
+rezone_308,$2b$12$JLRN3Vx1jZK..80vKLU22eexohOikPGbJkoAum/INrReknNjmjAse,student,Muktijoddha Hall,308,Rezone,,,0.0,0,both,0,0,0,normal,normal,normal
+rokon_308,$2b$12$VhHcnWgOBUAjFem67JpMD.uN37nPr7lqmQB9qr2eW9Ea2BPQQAEcG,student,Muktijoddha Hall,308,Rokon,,,0.0,0,both,0,0,0,normal,normal,normal
+azam_309,$2b$12$E/4m5MmCml95hSpTGrgT/.T5K5OgS11nCBXwf3ZuxtP0dxgoe9qJa,student,Muktijoddha Hall,309,Azam,,,0.0,0,both,0,0,0,normal,normal,normal
+chisty_309,$2b$12$15vKb9fMGUU5sMXlPFad/evNcExRSbQIONTPkEp/0cNXcKERm9dTu,student,Muktijoddha Hall,309,Chisty,,,0.0,0,both,0,0,0,normal,normal,normal
+murad_309,$2b$12$N9R5I3JVlWpLRqIzqalTYO/I9XwgCnYMLoKcaanzRm5LLIzvvSdGC,student,Muktijoddha Hall,309,Murad,,,0.0,0,both,0,0,0,normal,normal,normal
+shovon_309,$2b$12$0ot3mobk67MBJbrMk6y89eYn49bAJgEARwC4jk45uZnOGVgDlBe.2,student,Muktijoddha Hall,309,Shovon,,,0.0,0,both,0,0,0,normal,normal,normal
+tamim_309,$2b$12$32holRx516MOPoHmyLNaSOEjx/qBnfpnbOI0m5ZmSNai7HEicF.6.,student,Muktijoddha Hall,309,Tamim,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+rana_401,$2b$12$YcEM/1ggjYefcgbTV4qI/eONAgoXGZkwzyyUyyCBUiB.rmK/rFLyi,student,Muktijoddha Hall,401,Rana,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+sani_401,$2b$12$xxBS1olzatL9mu3jDX6GG.J44y6g7E5o4CF8CHWB7Le/xNh0vDG.i,student,Muktijoddha Hall,401,Sani,,,0.0,0,both,0,0,0,normal,normal,normal
+tamjid_401,$2b$12$ZEzsm66qWXw8h6/yw2tWs.5RCbf5eUvLKCAg24A18UbbRVdXkIRwu,student,Muktijoddha Hall,401,Tamjid,,,0.0,0,both,0,0,0,normal,normal,normal
+ashraf_402,$2b$12$.wjwhEpTIPDrJo0hpC/Fdez6Sxgp8UrdN8Cl2/pgUQNtH1oTlNCR2,student,Muktijoddha Hall,402,Ashraf,,,0.0,0,both,0,0,0,normal,normal,normal
+asif_402,$2b$12$E/6bcg1mfQxHKxgIa5R0oOviHQKAHaOiYXdkiu3D/SM8FvxlVnBjW,student,Muktijoddha Hall,402,Asif,,,0.0,0,both,0,0,0,normal,normal,normal
+mubin_402,$2b$12$kDHTkBeE5cTp1wPNDfi6Suc0AR.8gecSvIs4Z0QCYqde1f62lv9Z6,student,Muktijoddha Hall,402,Mubin,,,0.0,0,both,0,0,0,normal,normal,mutton
+yamin_402,$2b$12$J7UzHwWkDEUCPDh2zz0j3eKqu4DUHiSP.qV7Or6fMrHoQk8sK5/ZC,student,Muktijoddha Hall,402,Yamin,,,0.0,0,both,0,0,0,normal,normal,normal
+efty_403,$2b$12$/OR.pRdUhZBjYdJHkPbh2.fmMB2MlEjMIeCpRFdeJ8cq5Q6xrs0dC,student,Muktijoddha Hall,403,Efty,,,0.0,0,both,0,0,0,normal,normal,normal
+mursalin_403,$2b$12$Xf.frEPydpRKW0yTDA79BeWiYJTJXDqPjJuYOEnQjsXrFOWny2gk6,student,Muktijoddha Hall,403,Mursalin,,,0.0,0,both,0,0,0,normal,normal,normal
+rajib_403,$2b$12$1Dv0U513hEZrwiTTUzPHn.YnNRBUvfPf2T1WrEGm3uJQ7B5pI3.Rm,student,Muktijoddha Hall,403,Rajib,,,0.0,0,both,0,0,0,normal,egg_instead_of_fish,normal
+topu_403,$2b$12$jMZ/Yq9CS/oq.4b084Z/Gu3ni1RTLHjrNaFxhvqJZ5BjKQbebK2FO,student,Muktijoddha Hall,403,Topu,,,0.0,0,both,0,0,0,normal,normal,mutton
+jihad_404,$2b$12$.o4zXAIfiFp5ngDqgddD4ueAT70FDEcWxGX3e8SlR9NbBaEaS18pu,student,Muktijoddha Hall,404,Jihad,,,0.0,0,both,0,0,0,normal,normal,normal
+sadman_404,$2b$12$Kz/2pcRn4PYjgbX5yZaXKO5TT4RSvf8rTpbOsK3Ci/vxsUgp37vm2,student,Muktijoddha Hall,404,Sadman,,sadmanrahman40@gmail.com,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+saif_404,$2b$12$phg6IFEoNBD5Ure5o0Fq8OIKanMUejJz/RZQQlGr00GeybZ0iYWze,student,Muktijoddha Hall,404,Saif,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+hamidul_405,$2b$12$XVlc4MaxmgNOr.xNdCw9tOQU7hg1PQCxj30GVKOViGmOxcNbXn9Fa,student,Muktijoddha Hall,405,Hamidul,,,0.0,0,both,0,0,0,normal,normal,normal
+sanaullah_405,$2b$12$f2xFGPpWHns.uZD3DmaZs.7MeCuFlAKDfjPnJGpqOy/c.dA5ujuh2,student,Muktijoddha Hall,405,Sanaullah,,,0.0,0,both,0,0,0,normal,normal,normal
+selim_405,$2b$12$IxPwlHw7VELXD7LwUFnK3uyZLmuQledleW3T7jj1E.96Y.JJiRNbS,student,Muktijoddha Hall,405,Selim,,,0.0,0,both,0,0,0,normal,normal,normal
+shubham_405,$2b$12$IZlDn5qXzLedxf/JPxxTU.diYgnYe6Pyzc/dqIGkd4yFlvjjwowQe,student,Muktijoddha Hall,405,Shubham,,,0.0,0,both,0,0,0,normal,normal,mutton
 ador_406,$2b$12$l8g8xPUl5O3mBkeu.6Cj/u0bbaQpJr9UhnMqzrvpSIasZhNHAQ/.a,student,Muktijoddha Hall,406,Ador,,,0.0,0,both,0,0,0,normal,normal,normal
-joy_406,$2b$12$J.JWJZK0Sg2SAH2TUOub9.F9wDneQ3VRkpwZ9oYExwEQ4UBMmsfVa,student,Muktijoddha Hall,406,Joy,,,-10.459999999999695,0,both,0,0,0,normal,normal,normal
-rana_406,$2b$12$/aUzJZkYEYfGZPIQD/nP9uxxYFL4KrqouTnlCDtrWOMcZsEjWABPS,student,Muktijoddha Hall,406,Rana,,,-106.28000000000026,0,both,0,0,0,normal,normal,normal
-jarif_407,$2b$12$wr6W3ggdKqlV/L/twH6Q/O8eRMhrmiPmeVFG/3z/EDv2b9Xx.FsQC,student,Muktijoddha Hall,407,Jarif,,,7.740000000000009,0,both,0,0,0,normal,normal,normal
-pranto_407,$2b$12$IFl5CujJG3iogTMGx.TiBuQFkXqwoSFsr8i9ScG4VIV1asaQ4U/P6,student,Muktijoddha Hall,407,Pranto,,,7.740000000000066,0,both,0,0,0,normal,normal,mutton
-arju_408,$2b$12$aoPESv56bXpKGlqg.B4cfeqZJ4LhWgP4PZAxbUx4C0E9slBr5kPi6,student,Muktijoddha Hall,408,Arju,,,-556.2300000000001,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,mutton
-prionto_408,$2b$12$KEwnzG/aE8.FqTtY6kR2WeVi7PyVdRDaqc08dmjem8HY0pBB1gAoa,student,Muktijoddha Hall,408,Prionto,,,-553.0999999999998,0,both,0,0,0,normal,egg_instead_of_fish,mutton
+joy_406,$2b$12$J.JWJZK0Sg2SAH2TUOub9.F9wDneQ3VRkpwZ9oYExwEQ4UBMmsfVa,student,Muktijoddha Hall,406,Joy,,,0.0,0,both,0,0,0,normal,normal,normal
+rana_406,$2b$12$/aUzJZkYEYfGZPIQD/nP9uxxYFL4KrqouTnlCDtrWOMcZsEjWABPS,student,Muktijoddha Hall,406,Rana,,,0.0,0,both,0,0,0,normal,normal,normal
+jarif_407,$2b$12$wr6W3ggdKqlV/L/twH6Q/O8eRMhrmiPmeVFG/3z/EDv2b9Xx.FsQC,student,Muktijoddha Hall,407,Jarif,,,0.0,0,both,0,0,0,normal,normal,normal
+pranto_407,$2b$12$IFl5CujJG3iogTMGx.TiBuQFkXqwoSFsr8i9ScG4VIV1asaQ4U/P6,student,Muktijoddha Hall,407,Pranto,,,0.0,0,both,0,0,0,normal,normal,mutton
+arju_408,$2b$12$aoPESv56bXpKGlqg.B4cfeqZJ4LhWgP4PZAxbUx4C0E9slBr5kPi6,student,Muktijoddha Hall,408,Arju,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,mutton
+prionto_408,$2b$12$KEwnzG/aE8.FqTtY6kR2WeVi7PyVdRDaqc08dmjem8HY0pBB1gAoa,student,Muktijoddha Hall,408,Prionto,,,0.0,0,both,0,0,0,normal,egg_instead_of_fish,mutton
 sajid_408,$2b$12$7KebNIyKOMTSpiV/Bd9cV.f0VKkXbZq.o5y5ro82gYLD0ZGwFccsy,student,Muktijoddha Hall,408,Sajid,,,0.0,0,both,0,0,0,normal,normal,normal
-asadullah_409,$2b$12$w20oEsW9yq2vveu2ZsQ93uAtO94m3Xkd.CLb57EuVSZIXppdJIB4S,student,Muktijoddha Hall,409,Asadullah,,,-354.99,0,both,0,0,0,normal,normal,normal
-sabbir_409,$2b$12$sjEZ0XDdY.8ifwLxW7pUb..B.F0Hep9WA3M8zje/FgdTEaXDp6YSe,student,Muktijoddha Hall,409,Sabbir,,,0.06000000000028649,0,both,0,0,0,normal,normal,normal
-sarhady_409,$2b$12$trn25kEtv3RKprT6eBBgse05dDSyiRXBL3dtfpKKq56IdDqaTbPYq,student,Muktijoddha Hall,409,Sarhady,,,-1053.1,0,both,0,0,0,normal,normal,normal
-tawsif_409,$2b$12$QO/LIWFD5Ebv3.tm32Gjc.afjZLqfyLWU.ZyAQy3LR29Xo3u2sHri,student,Muktijoddha Hall,409,Tawsif,,,2.900000000000432,0,both,0,0,0,normal,normal,normal
-akash_501,$2b$12$f3C8aFAiJdRA0d.0eKYCM.VgIjpcA25vZ8m6h0Et7P1h68oMY2AGW,student,Muktijoddha Hall,501,Akash,,,6.839999999999748,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-emon_501,$2b$12$vLamYlyoEbAUM7RdueSdn.zxvMxn3h22NXmfwthHRtv1m8Q0s6owm,student,Muktijoddha Hall,501,Emon,,,-3.470000000000198,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-najim_501,$2b$12$W3iJgxhLU1DL0a3JdAEjsezgnnj76vQhIZvRTlSsn5xWWgjuA2zq2,student,Muktijoddha Hall,501,Najim,,,-68.33999999999969,0,both,0,0,0,normal,normal,normal
-kawser_502,$2b$12$5ejxvLJf8RBUM4x.drXFQ.40S8OrfqsIgoiRCg6JZ0lpPzBbkTemq,student,Muktijoddha Hall,502,Kawser,,,5.63000000000028,0,both,0,0,0,normal,normal,normal
-rafi_502,$2b$12$W3D.Lb8GPANy/XM5LZCkn.47l4FFD6zTjnGl8YmHNiYmjAIXWpM/C,student,Muktijoddha Hall,502,Rafi,,,-3.099999999999909,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-robiul_502,$2b$12$4WBQelwOiOwv0AeJvnx0FOu/q2pqAGDJPJ593FrxNfphrECM.n0sC,student,Muktijoddha Hall,502,Robiul,,,-3.6399999999998727,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-rubayet_502,$2b$12$yeN4m3m37wiPMr53B7CS6um78oUJEcEqtNWGS/RG/3e.fnHfaaD8a,student,Muktijoddha Hall,502,Rubayet,,,-11.409999999999968,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-fahim_503,$2b$12$qddFyYAP5xDSyEBDWlc.neGfY5/Cj2OMEtxaXEvDTXYzAF8WVPJN.,student,Muktijoddha Hall,503,Fahim,,,5.69000000000085,0,both,0,0,0,normal,normal,normal
-manik_503,$2b$12$OHhUcM/nOYSCyCLMelsKuu9dwBdLNGox.6lWdzgMHOSVtK88.tTUe,student,Muktijoddha Hall,503,Manik,,,-3.3299999999998704,0,both,0,0,0,normal,normal,mutton
-mizanur_503,$2b$12$U8YV1VdN/0uT7yMRISiCPutqDF0nR77jhlH0.FW4QtxNXMPkZdISK,student,Muktijoddha Hall,503,Mizanur,,,6.370000000000516,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-rupak_503,$2b$12$dkssKHHhxI.4wu87hVMCwuUKeF/n4FD9FG459VUU/wQletxlpWYFi,student,Muktijoddha Hall,503,Rupak,,,0.6399999999999864,0,both,0,0,0,normal,normal,normal
-aurko_504,$2b$12$Ff2POYrPzhrWLEfIochNPeS9i0iD/fywLuUypFzyHY.o6CCuN27/K,student,Muktijoddha Hall,504,Aurko,,,7.160000000000423,0,both,0,0,0,normal,normal,normal
-fida_504,$2b$12$iqfqG.Lo/Mkd5A3TxvT7TOvaqwbrDKXgbO6i92LHtvLlpzl7cVwsO,student,Muktijoddha Hall,504,Fida,,,6.166997381838655,0,both,0,0,0,normal,normal,normal
-rifat_504,$2b$12$uFOEIsc1RWjGI4zUA2z4oOsQ6T/xxGXL2b68PzbJpSusNdLKtWG1G,student,Muktijoddha Hall,504,Rifat,,,-829.7499999999998,0,both,0,0,0,normal,normal,normal
-zahid_504,$2b$12$hGg.g3IO9xcT/x2tRkt.DuS4foQL7yQLaWgCh6tM2gp1GRSfFnMkq,student,Muktijoddha Hall,504,Zahid,,,-322.54999999999995,0,both,0,0,0,normal,normal,normal
-bayzed_505,$2b$12$CKHMsN6zUMRvHKmDMmHBxuLorwVGAoiLjaY6olUkOeuFABLpeq6Qe,student,Muktijoddha Hall,505,Bayzed,,,-974.8999999999994,0,both,0,0,0,normal,normal,normal
-mohosin_505,$2b$12$LRWbTxiokEoX/IZEz3a.OupTOZndX..qmcfCcBbjXxub1idsIzkzO,student,Muktijoddha Hall,505,Mohosin,,,-8.8900000000001,0,both,0,0,0,normal,normal,normal
-morshed_505,$2b$12$yCbuDLA1F15OtD746a8vw.J92hSdFJGOKE3U5i7ixX9i/YUjM9zSK,student,Muktijoddha Hall,505,Morshed,,,-27.6400000000001,0,both,0,0,0,normal,normal,normal
-sayem_505,$2b$12$U2KOl8GEY6jE/EqZPeQvHOY2sTSXHXkPL8O0jBTn3qOvnnZ8ign0O,student,Muktijoddha Hall,505,Sayem,,,-12.48999999999971,0,both,0,0,0,normal,normal,normal
-alif_506,$2b$12$BZYpWx1uCSELx7KDgJuLM.X7nxJPzWkgXbNh4wa82XeiK5OldJWzS,student,Muktijoddha Hall,506,Alif,,,6.639999999999702,0,both,0,0,0,normal,normal,normal
-ashik_506,$2b$12$LJbgj83K.tgTRn/LPKWGZ.t1WaSobApEqINSeL1z/6ZouG0SkslBq,student,Muktijoddha Hall,506,Ashik,,,-11.839999999999861,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
-joyonto_506,$2b$12$sQJOLI/S2DX0.cOMNx6/ouV8xf50hs2q8B3nKna4FxUvnXAwNHNii,student,Muktijoddha Hall,506,Joyonto,,,10.690000000000055,0,both,0,0,0,normal,normal,mutton
-ramin_506,$2b$12$JC2EguZxlJDw5pJlY3kKw.VE9ofpXH77j1QPhP0aN0iJT6LY0/lz.,student,Muktijoddha Hall,506,Ramin,,,-3.779999999998836,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
-pritom_507,$2b$12$eBFOX8/jOwKEnunnEv0lvuCvwFAMOnp5ZivTOi6/pmnSbVNMLr0.C,student,Muktijoddha Hall,507,Pritom,,,9.080000000000268,0,both,0,0,0,normal,normal,mutton
-rakib_507,$2b$12$0OAOAQbND7O1ZngHNQqbGe8wQI1ywN1gA.qEy2JrO/Pk1KGCFBciW,student,Muktijoddha Hall,507,Rakib,,,-3.0999999999997954,0,both,0,0,0,normal,normal,normal
-rihan_507,$2b$12$jciSoihJrv24Wfr/oG7ApeLTd2TI2F8alZZsnCQ4HfegC5pAuIela,student,Muktijoddha Hall,507,Rihan,,,-70.19999999999908,0,both,0,0,0,normal,normal,normal
-manik_508,$2b$12$SJLkYCdiWAfcpd0oQsmTJuC9HLQeUs4DpKQX176IXS4.zdAlZaGAK,student,Muktijoddha Hall,508,Manik,,,-91.30999999999995,0,both,0,0,0,normal,normal,mutton
-mitul_508,$2b$12$cXm5tWnCgzVVdKzNDF0o9O/WAOg4HL.xlNFIIUnY2zt2mQot0OKf.,student,Muktijoddha Hall,508,Mitul,,,-3.739999999999327,0,both,0,0,0,normal,normal,normal
-morshed_508,$2b$12$DzSfgD6cOX3cMh76amT1QeJM9ShqyfndMI/hxLyZzG6iEPjUhB8LK,student,Muktijoddha Hall,508,Morshed,,,-1.1799999999992394,0,both,0,0,0,normal,normal,normal
-sayef_508,$2b$12$yrmw9HkVUgUHILZrhUOEqOu78YZV82z/R5r90PblygLlgOayzUEQi,student,Muktijoddha Hall,508,Sayef,,,-1.3599999999999284,0,both,0,0,0,normal,normal,normal
-arafat_509,$2b$12$kDdqQ74X58ds.3y3M60O8eaTYXAT/8IXABdd1kWjPgNrXTXdVUCye,student,Muktijoddha Hall,509,Arafat,,,-164.82999999999998,0,both,0,0,0,normal,normal,normal
-nibir_509,$2b$12$RzITvHsqyNAKjsJInEWUJ.FFOydFk.Dfe895lXp4uSqZaKRDnV6bG,student,Muktijoddha Hall,509,Nibir,,,7.440000000000396,0,both,0,0,0,normal,normal,normal
-niloy_509,$2b$12$ivMq7V9XdbfmOZlWx31vqucg8qX1L.YMRCYO1wDk7pGD6IjgTHdvq,student,Muktijoddha Hall,509,Niloy,,,7.160000000000309,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
-zisan_509,$2b$12$WTv.pF6DhuZoxFMiTZcKfOzYGvQAuTCYJSE8FKAjOHZlsdsZqr5rO,student,Muktijoddha Hall,509,Zisan,,,7.6300000000003365,0,both,0,0,0,normal,normal,normal
-mess_arafat_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Arafat,,,-1.3600000000000136,0,both,0,0,0,normal,normal,mutton
-mess_atik_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Atik,,,0.6399999999999864,0,both,0,0,0,normal,normal,normal
-mess_azim_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Azim,,,-11.360000000000014,0,both,0,0,0,normal,normal,normal
-mess_duha_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Duha,,,-11.360000000000014,0,both,0,0,0,normal,normal,normal
-mess_ibtasum_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Ibtasum,,,0.6399999999999864,0,both,0,0,0,normal,normal,normal
-mess_sadhin_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Sadhin,,,-9.360000000000014,0,both,0,0,0,normal,normal,normal
-mess_shaon_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Shaon,,,0.6399999999999864,0,both,0,0,0,normal,normal,normal
-mess_surid_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Surid,,,-11.360000000000014,0,both,0,0,0,normal,normal,normal
+asadullah_409,$2b$12$w20oEsW9yq2vveu2ZsQ93uAtO94m3Xkd.CLb57EuVSZIXppdJIB4S,student,Muktijoddha Hall,409,Asadullah,,,0.0,0,both,0,0,0,normal,normal,normal
+sabbir_409,$2b$12$sjEZ0XDdY.8ifwLxW7pUb..B.F0Hep9WA3M8zje/FgdTEaXDp6YSe,student,Muktijoddha Hall,409,Sabbir,,,0.0,0,both,0,0,0,normal,normal,normal
+sarhady_409,$2b$12$trn25kEtv3RKprT6eBBgse05dDSyiRXBL3dtfpKKq56IdDqaTbPYq,student,Muktijoddha Hall,409,Sarhady,,,0.0,0,both,0,0,0,normal,normal,normal
+tawsif_409,$2b$12$QO/LIWFD5Ebv3.tm32Gjc.afjZLqfyLWU.ZyAQy3LR29Xo3u2sHri,student,Muktijoddha Hall,409,Tawsif,,,0.0,0,both,0,0,0,normal,normal,normal
+akash_501,$2b$12$f3C8aFAiJdRA0d.0eKYCM.VgIjpcA25vZ8m6h0Et7P1h68oMY2AGW,student,Muktijoddha Hall,501,Akash,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+emon_501,$2b$12$vLamYlyoEbAUM7RdueSdn.zxvMxn3h22NXmfwthHRtv1m8Q0s6owm,student,Muktijoddha Hall,501,Emon,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+najim_501,$2b$12$W3iJgxhLU1DL0a3JdAEjsezgnnj76vQhIZvRTlSsn5xWWgjuA2zq2,student,Muktijoddha Hall,501,Najim,,,0.0,0,both,0,0,0,normal,normal,normal
+kawser_502,$2b$12$5ejxvLJf8RBUM4x.drXFQ.40S8OrfqsIgoiRCg6JZ0lpPzBbkTemq,student,Muktijoddha Hall,502,Kawser,,,0.0,0,both,0,0,0,normal,normal,normal
+rafi_502,$2b$12$W3D.Lb8GPANy/XM5LZCkn.47l4FFD6zTjnGl8YmHNiYmjAIXWpM/C,student,Muktijoddha Hall,502,Rafi,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+robiul_502,$2b$12$4WBQelwOiOwv0AeJvnx0FOu/q2pqAGDJPJ593FrxNfphrECM.n0sC,student,Muktijoddha Hall,502,Robiul,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+rubayet_502,$2b$12$yeN4m3m37wiPMr53B7CS6um78oUJEcEqtNWGS/RG/3e.fnHfaaD8a,student,Muktijoddha Hall,502,Rubayet,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+fahim_503,$2b$12$qddFyYAP5xDSyEBDWlc.neGfY5/Cj2OMEtxaXEvDTXYzAF8WVPJN.,student,Muktijoddha Hall,503,Fahim,,,0.0,0,both,0,0,0,normal,normal,normal
+manik_503,$2b$12$OHhUcM/nOYSCyCLMelsKuu9dwBdLNGox.6lWdzgMHOSVtK88.tTUe,student,Muktijoddha Hall,503,Manik,,,0.0,0,both,0,0,0,normal,normal,mutton
+mizanur_503,$2b$12$U8YV1VdN/0uT7yMRISiCPutqDF0nR77jhlH0.FW4QtxNXMPkZdISK,student,Muktijoddha Hall,503,Mizanur,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+rupak_503,$2b$12$dkssKHHhxI.4wu87hVMCwuUKeF/n4FD9FG459VUU/wQletxlpWYFi,student,Muktijoddha Hall,503,Rupak,,,0.0,0,both,0,0,0,normal,normal,normal
+aurko_504,$2b$12$Ff2POYrPzhrWLEfIochNPeS9i0iD/fywLuUypFzyHY.o6CCuN27/K,student,Muktijoddha Hall,504,Aurko,,,0.0,0,both,0,0,0,normal,normal,normal
+fida_504,$2b$12$iqfqG.Lo/Mkd5A3TxvT7TOvaqwbrDKXgbO6i92LHtvLlpzl7cVwsO,student,Muktijoddha Hall,504,Fida,,,0.0,0,both,0,0,0,normal,normal,normal
+rifat_504,$2b$12$uFOEIsc1RWjGI4zUA2z4oOsQ6T/xxGXL2b68PzbJpSusNdLKtWG1G,student,Muktijoddha Hall,504,Rifat,,,0.0,0,both,0,0,0,normal,normal,normal
+zahid_504,$2b$12$hGg.g3IO9xcT/x2tRkt.DuS4foQL7yQLaWgCh6tM2gp1GRSfFnMkq,student,Muktijoddha Hall,504,Zahid,,,0.0,0,both,0,0,0,normal,normal,normal
+bayzed_505,$2b$12$CKHMsN6zUMRvHKmDMmHBxuLorwVGAoiLjaY6olUkOeuFABLpeq6Qe,student,Muktijoddha Hall,505,Bayzed,,,0.0,0,both,0,0,0,normal,normal,normal
+mohosin_505,$2b$12$LRWbTxiokEoX/IZEz3a.OupTOZndX..qmcfCcBbjXxub1idsIzkzO,student,Muktijoddha Hall,505,Mohosin,,,0.0,0,both,0,0,0,normal,normal,normal
+morshed_505,$2b$12$yCbuDLA1F15OtD746a8vw.J92hSdFJGOKE3U5i7ixX9i/YUjM9zSK,student,Muktijoddha Hall,505,Morshed,,,0.0,0,both,0,0,0,normal,normal,normal
+sayem_505,$2b$12$U2KOl8GEY6jE/EqZPeQvHOY2sTSXHXkPL8O0jBTn3qOvnnZ8ign0O,student,Muktijoddha Hall,505,Sayem,,,0.0,0,both,0,0,0,normal,normal,normal
+alif_506,$2b$12$BZYpWx1uCSELx7KDgJuLM.X7nxJPzWkgXbNh4wa82XeiK5OldJWzS,student,Muktijoddha Hall,506,Alif,,,0.0,0,both,0,0,0,normal,normal,normal
+ashik_506,$2b$12$LJbgj83K.tgTRn/LPKWGZ.t1WaSobApEqINSeL1z/6ZouG0SkslBq,student,Muktijoddha Hall,506,Ashik,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,mutton
+joyonto_506,$2b$12$sQJOLI/S2DX0.cOMNx6/ouV8xf50hs2q8B3nKna4FxUvnXAwNHNii,student,Muktijoddha Hall,506,Joyonto,,,0.0,0,both,0,0,0,normal,normal,mutton
+ramin_506,$2b$12$JC2EguZxlJDw5pJlY3kKw.VE9ofpXH77j1QPhP0aN0iJT6LY0/lz.,student,Muktijoddha Hall,506,Ramin,,,0.0,0,both,0,0,0,if_pangas_then_egg,if_pangas_then_egg,normal
+pritom_507,$2b$12$eBFOX8/jOwKEnunnEv0lvuCvwFAMOnp5ZivTOi6/pmnSbVNMLr0.C,student,Muktijoddha Hall,507,Pritom,,,0.0,0,both,0,0,0,normal,normal,mutton
+rakib_507,$2b$12$0OAOAQbND7O1ZngHNQqbGe8wQI1ywN1gA.qEy2JrO/Pk1KGCFBciW,student,Muktijoddha Hall,507,Rakib,,,0.0,0,both,0,0,0,normal,normal,normal
+rihan_507,$2b$12$jciSoihJrv24Wfr/oG7ApeLTd2TI2F8alZZsnCQ4HfegC5pAuIela,student,Muktijoddha Hall,507,Rihan,,,0.0,0,both,0,0,0,normal,normal,normal
+manik_508,$2b$12$SJLkYCdiWAfcpd0oQsmTJuC9HLQeUs4DpKQX176IXS4.zdAlZaGAK,student,Muktijoddha Hall,508,Manik,,,0.0,0,both,0,0,0,normal,normal,mutton
+mitul_508,$2b$12$cXm5tWnCgzVVdKzNDF0o9O/WAOg4HL.xlNFIIUnY2zt2mQot0OKf.,student,Muktijoddha Hall,508,Mitul,,,0.0,0,both,0,0,0,normal,normal,normal
+morshed_508,$2b$12$DzSfgD6cOX3cMh76amT1QeJM9ShqyfndMI/hxLyZzG6iEPjUhB8LK,student,Muktijoddha Hall,508,Morshed,,,0.0,0,both,0,0,0,normal,normal,normal
+sayef_508,$2b$12$yrmw9HkVUgUHILZrhUOEqOu78YZV82z/R5r90PblygLlgOayzUEQi,student,Muktijoddha Hall,508,Sayef,,,0.0,0,both,0,0,0,normal,normal,normal
+arafat_509,$2b$12$kDdqQ74X58ds.3y3M60O8eaTYXAT/8IXABdd1kWjPgNrXTXdVUCye,student,Muktijoddha Hall,509,Arafat,,,0.0,0,both,0,0,0,normal,normal,normal
+nibir_509,$2b$12$RzITvHsqyNAKjsJInEWUJ.FFOydFk.Dfe895lXp4uSqZaKRDnV6bG,student,Muktijoddha Hall,509,Nibir,,,0.0,0,both,0,0,0,normal,normal,normal
+niloy_509,$2b$12$ivMq7V9XdbfmOZlWx31vqucg8qX1L.YMRCYO1wDk7pGD6IjgTHdvq,student,Muktijoddha Hall,509,Niloy,,,0.0,0,both,0,0,0,egg_instead_of_fish,egg_instead_of_fish,normal
+zisan_509,$2b$12$WTv.pF6DhuZoxFMiTZcKfOzYGvQAuTCYJSE8FKAjOHZlsdsZqr5rO,student,Muktijoddha Hall,509,Zisan,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_arafat_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Arafat,,,0.0,0,both,0,0,0,normal,normal,mutton
+mess_atik_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Atik,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_azim_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Azim,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_duha_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Duha,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_ibtasum_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Ibtasum,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_sadhin_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Sadhin,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_shaon_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Shaon,,,0.0,0,both,0,0,0,normal,normal,normal
+mess_surid_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Surid,,,0.0,0,both,0,0,0,normal,normal,normal
 mess_tawsif_00,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,00,Tawsif,,,0.0,0,both,0,0,0,normal,normal,normal
-aeh_101_rony,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,101,Rony,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_102_shihab,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Shihab,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_102_shuvo,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Shuvo,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_102_touhidul,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Touhidul,,,-4.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_103_antor,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Antor,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_103_arnob,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Arnob,,,-7.220000000000027,0,both,0,0,0,normal,normal,normal
-aeh_103_ibrahim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Ibrahim,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_bibek_103,$2b$12$jZP5SIz8tntP44UbhBUDUOktF8qs50KAKdyUjkKHH3I4gHnwZ5Nta,student,Amar Ekushe Hall,103,Bibek,,,-1.3600000000000136,0,both,0,0,0,normal,normal,mutton
-aeh_107_abir,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Abir,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_107_masud,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Masud,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_107_rafim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Rafim,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_107_sani,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Sani,,,-22.34999999999991,0,both,0,0,0,normal,normal,normal
-aeh_nirjon_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Nirjon,,,-7.0,0,both,0,0,0,normal,normal,normal
-aeh_rahat_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Rahat,,,-311.36,0,both,0,0,0,normal,normal,normal
-aeh_salman_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Salman,,,-311.36,0,both,0,0,0,normal,normal,normal
-aeh_siam_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Siam,,,-1.3600000000000136,0,both,0,0,0,normal,normal,normal
-aeh_204_ashfaque,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,204,Ashfaque,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_204_ifaz,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,204,Ifaz,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_205_mahfuz,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Mahfuz,,,-6.359999999999999,0,both,0,0,0,normal,normal,normal
-aeh_205_sarwar,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Sarwar,,,-6.359999999999999,0,both,0,0,0,normal,normal,normal
-aeh_205_shakib,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Shakib,,,-6.359999999999999,0,both,0,0,0,normal,normal,normal
-aeh_205_showrov,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Showrov,,,-6.359999999999999,0,both,0,0,0,normal,normal,normal
-aeh_207_adnan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Adnan,,,-6.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_207_nayem,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Nayem,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_207_tanjeem,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Tanjeem,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_rayhan_208,$2b$12$Jfa1ZYYY.3mGAoAmGw2jsOvW.jkzdcVvPtw8G6u0Y8iPGV9W9dwCm,student,Amar Ekushe Hall,208,Rayhan,,,18.199999999999818,0,both,0,0,0,normal,normal,normal
-aeh_tanvir_208,guest123,student,Amar Ekushe Hall,208,Tanvir,,,-36.18000000000018,0,,0,0,0,,,
-aeh_209_sahaf,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,209,Sahaf,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_emon_209,$2b$12$QTRPQVH1wxk1p/Lv4FHN2Of5DZzFFSeQI8hFWfdGDD7.36qMkH/LO,student,Amar Ekushe Hall,209,Emon,,,-8.400000000000034,0,both,0,0,0,normal,normal,normal
-aeh_rashed_209,$2b$12$QTRPQVH1wxk1p/Lv4FHN2Of5DZzFFSeQI8hFWfdGDD7.36qMkH/LO,student,Amar Ekushe Hall,209,Rashed,,,-8.400000000000034,0,both,0,0,0,normal,normal,normal
-aeh_210_nafis,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,210,Nafis,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_iftel_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Iftel,,,-14.120000000000005,0,both,0,0,0,normal,normal,normal
-aeh_iqbal_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Iqbal,,,-11.120000000000005,0,both,0,0,0,normal,normal,normal
-aeh_ratan_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Ratan,,,-11.120000000000005,0,both,0,0,0,normal,normal,mutton
-aeh_tridip_302,aeh_tridip_302,student,Amar Ekushe Hall,302,Tridip,,,-21.605563025210074,0,,0,0,0,,,
-aeh_303_sadh,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,303,Sadh,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_305_sefat,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Sefat,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_305_shoeab,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Shoeab,,,-4.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_305_tanzim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Tanzim,,,-4.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_306_fahim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,306,Fahim,,,-93.86,0,both,0,0,0,normal,normal,normal
-aeh_amit_306,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,306,Amit,,,-88.86,0,both,0,0,0,normal,normal,normal
-aeh_308_sohan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,308,Sohan,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_rukon_402,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,402,Rukon,,,1.1400000000000006,0,both,0,0,0,normal,normal,normal
-aeh_tafsir_402,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,402,Tafsir,,,1.1400000000000006,0,both,0,0,0,normal,normal,normal
-aeh_403_kawser,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Kawser,,,-5.7999999999999545,0,both,0,0,0,normal,normal,normal
-aeh_403_robiul,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Robiul,,,-627.59,0,both,0,0,0,normal,normal,normal
-aeh_403_sultan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Sultan,,,-2.7999999999999545,0,both,0,0,0,normal,normal,normal
-aeh_sultan2_403,$2b$12$l/iwzYaLUFI.5VfqbzJ/3.G1uW9Bi64f63aJnlOP6wZguc8dAdyVi,student,Amar Ekushe Hall,403,Sultan2,,,-2.730000000000018,0,both,0,0,0,normal,normal,normal
-aeh_404_shan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,404,Shan,,,-4.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_404_tawhid,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,404,Tawhid,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_sayem_406,guest123,student,Amar Ekushe Hall,406,Sayem,,,1.1365277777777862,0,,0,0,0,,,
-aeh_408_nipu,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,408,Nipu,,,-4.859999999999957,0,both,0,0,0,normal,normal,normal
-aeh_408_shafi,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,408,Shafi,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_501_mizan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,501,Mizan,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_502_sami,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,502,Sami,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_502_tanmay,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,502,Tanmay,,,-4.859999999999999,0,both,0,0,0,normal,normal,normal
-aeh_504_azam,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,504,Azam,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_505_hasib,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Hasib,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_505_sefat,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Sefat,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_505_shuvo,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Shuvo,,,-93.86,0,both,0,0,0,normal,normal,normal
-aeh_506_intisar,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,506,Intisar,,,-12.139999999999986,0,both,0,0,0,normal,normal,normal
-aeh_506_ruhan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,506,Ruhan,,,-10.86,0,both,0,0,0,normal,normal,normal
-aeh_mosharaf_506,$2b$12$b5Dy7bHVPbw3hD/2wE1/hutM0t8PwJPyp/1qM/49Us.hF1oFU2y16,student,Amar Ekushe Hall,506,Mosharaf,,,-3.4599999999999795,0,both,0,0,0,normal,normal,normal
-aeh_reduan_506,$2b$12$t38GPLVxlFAEd2WzqmJReeWbOwRBjMwb6Sa2vcuD0ehDZgIt1CHbu,student,Amar Ekushe Hall,506,Reduan,,,-648.9399999999999,0,both,0,0,0,normal,normal,normal
-aeh_shihab_506,$2b$12$ublvYbDzeCGQFMDI1Ow.qeUgW65Bsg3f7QAgaq09hTG28T0pvU7l2,student,Amar Ekushe Hall,506,Shihab,,,-334.52,0,both,0,0,0,normal,normal,normal
-aeh_508_muhit,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,508,Muhit,,,-3.8599999999999994,0,both,0,0,0,normal,normal,normal
-aeh_torikul_508,$2b$12$VnUcyvsXeZLHJeyCCoUHt.c9yN/kJbbs25RbJ2.UCzERwNocXMRUa,student,Amar Ekushe Hall,508,Torikul,,,-0.36000000000001364,0,both,0,0,0,normal,normal,normal
-aeh_habib_509,$2b$12$jZP5SIz8tntP44UbhBUDUOktF8qs50KAKdyUjkKHH3I4gHnwZ5Nta,student,Amar Ekushe Hall,509,Habib,,,-0.36000000000001364,0,both,0,0,0,normal,normal,normal
+aeh_101_rony,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,101,Rony,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_102_shihab,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Shihab,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_102_shuvo,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Shuvo,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_102_touhidul,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,102,Touhidul,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_103_antor,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Antor,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_103_arnob,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Arnob,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_103_ibrahim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,103,Ibrahim,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_bibek_103,$2b$12$jZP5SIz8tntP44UbhBUDUOktF8qs50KAKdyUjkKHH3I4gHnwZ5Nta,student,Amar Ekushe Hall,103,Bibek,,,0.0,0,both,0,0,0,normal,normal,mutton
+aeh_107_abir,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Abir,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_107_masud,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Masud,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_107_rafim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Rafim,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_107_sani,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,107,Sani,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_nirjon_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Nirjon,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_rahat_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Rahat,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_salman_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Salman,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_siam_201,$2b$12$RdeN.azI42kSJfNcmypDR.cq2uZJQNFCGvRmvfv4fL1Owa7iioNmm,student,Amar Ekushe Hall,201,Siam,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_204_ashfaque,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,204,Ashfaque,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_204_ifaz,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,204,Ifaz,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_205_mahfuz,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Mahfuz,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_205_sarwar,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Sarwar,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_205_shakib,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Shakib,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_205_showrov,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,205,Showrov,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_207_adnan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Adnan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_207_nayem,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Nayem,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_207_tanjeem,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,207,Tanjeem,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_rayhan_208,$2b$12$Jfa1ZYYY.3mGAoAmGw2jsOvW.jkzdcVvPtw8G6u0Y8iPGV9W9dwCm,student,Amar Ekushe Hall,208,Rayhan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_tanvir_208,$2b$12$SHvkqBU6qSsKuw3mqdGYVuIyjC4xDnWx/umk.qTh6A5Uurl1K1vYm,student,Amar Ekushe Hall,208,Tanvir,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_209_sahaf,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,209,Sahaf,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_emon_209,$2b$12$QTRPQVH1wxk1p/Lv4FHN2Of5DZzFFSeQI8hFWfdGDD7.36qMkH/LO,student,Amar Ekushe Hall,209,Emon,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_rashed_209,$2b$12$QTRPQVH1wxk1p/Lv4FHN2Of5DZzFFSeQI8hFWfdGDD7.36qMkH/LO,student,Amar Ekushe Hall,209,Rashed,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_210_nafis,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,210,Nafis,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_iftel_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Iftel,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_iqbal_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Iqbal,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_ratan_302,$2b$12$sVlhi0dvnioZyPLkydmG/OjLLZl4vb6bxJTayJcjYEtBswFWeDYuC,student,Amar Ekushe Hall,302,Ratan,,,0.0,0,both,0,0,0,normal,normal,mutton
+aeh_tridip_302,$2b$12$GhvpRswqTAHswwLkoyvBBeBOsEEstF.KtgjIUPm.2ugCERBmtg0WG,student,Amar Ekushe Hall,302,Tridip,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_303_sadh,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,303,Sadh,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_305_sefat,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Sefat,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_305_shoeab,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Shoeab,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_305_tanzim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,305,Tanzim,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_306_fahim,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,306,Fahim,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_amit_306,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,306,Amit,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_308_sohan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,308,Sohan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_rukon_402,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,402,Rukon,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_tafsir_402,$2b$12$hJCpGWfWlNA8ptWUCRhW/Oj0lCAdxJdWC1wb58Lpoo.gW7ZMmms/a,student,Amar Ekushe Hall,402,Tafsir,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_403_kawser,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Kawser,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_403_robiul,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Robiul,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_403_sultan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,403,Sultan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_sultan2_403,$2b$12$l/iwzYaLUFI.5VfqbzJ/3.G1uW9Bi64f63aJnlOP6wZguc8dAdyVi,student,Amar Ekushe Hall,403,Sultan2,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_404_shan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,404,Shan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_404_tawhid,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,404,Tawhid,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_sayem_406,$2b$12$pSCPyHTBBYzjxBIHkafbLOR9tzHXS8UDmpBz6L/DQjOfI.HSoq4Ua,student,Amar Ekushe Hall,406,Sayem,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_408_nipu,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,408,Nipu,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_408_shafi,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,408,Shafi,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_501_mizan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,501,Mizan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_502_sami,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,502,Sami,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_502_tanmay,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,502,Tanmay,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_504_azam,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,504,Azam,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_505_hasib,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Hasib,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_505_sefat,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Sefat,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_505_shuvo,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,505,Shuvo,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_506_intisar,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,506,Intisar,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_506_ruhan,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,506,Ruhan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_mosharaf_506,$2b$12$b5Dy7bHVPbw3hD/2wE1/hutM0t8PwJPyp/1qM/49Us.hF1oFU2y16,student,Amar Ekushe Hall,506,Mosharaf,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_reduan_506,$2b$12$t38GPLVxlFAEd2WzqmJReeWbOwRBjMwb6Sa2vcuD0ehDZgIt1CHbu,student,Amar Ekushe Hall,506,Reduan,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_shihab_506,$2b$12$ublvYbDzeCGQFMDI1Ow.qeUgW65Bsg3f7QAgaq09hTG28T0pvU7l2,student,Amar Ekushe Hall,506,Shihab,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_508_muhit,$2b$12$loS5PLbaKRx6DhxMAbJo6eeUQQ49G5.DL0HtVsXpuftQFOHjr.U72,student,Amar Ekushe Hall,508,Muhit,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_torikul_508,$2b$12$VnUcyvsXeZLHJeyCCoUHt.c9yN/kJbbs25RbJ2.UCzERwNocXMRUa,student,Amar Ekushe Hall,508,Torikul,,,0.0,0,both,0,0,0,normal,normal,normal
+aeh_habib_509,$2b$12$jZP5SIz8tntP44UbhBUDUOktF8qs50KAKdyUjkKHH3I4gHnwZ5Nta,student,Amar Ekushe Hall,509,Habib,,,0.0,0,both,0,0,0,normal,normal,normal
