@@ -29,15 +29,21 @@ echo "[2/5] Checking configuration..."
 if [ -f ".env" ] && grep -q "^ADMIN_USERNAME=" ".env"; then
     echo "  OK - Existing configuration found."
 else
-    echo "  First-time setup. Creating admin credentials..."
+    echo ""
+    echo "  =============================================="
+    echo "     eDining First-Time Setup: Super Admin"
+    echo "  =============================================="
+    echo "  Configure the initial Super Admin account."
+    echo "  This account will have full access to create halls,"
+    echo "  assign managers, and register students."
     echo ""
     echo "  (Press Enter to accept defaults in brackets)"
     echo ""
 
-    read -p "  Admin username [admin]: " ADMIN_USERNAME
+    read -p "  Super Admin username [admin]: " ADMIN_USERNAME
     ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
 
-    read -p "  Admin password [admin123]: " ADMIN_PASSWORD
+    read -p "  Super Admin password [admin123]: " ADMIN_PASSWORD
     ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
 
     read -p "  Admin display name [System Super Admin]: " ADMIN_NAME
@@ -46,14 +52,26 @@ else
     read -p "  Admin phone [01711223344]: " ADMIN_PHONE
     ADMIN_PHONE=${ADMIN_PHONE:-01711223344}
 
+    read -p "  Admin email [admin@example.com]: " ADMIN_EMAIL
+    ADMIN_EMAIL=${ADMIN_EMAIL:-admin@example.com}
+
+    read -p "  Starter Dining Hall name [Main Dining Hall]: " DEFAULT_HALL_NAME
+    DEFAULT_HALL_NAME=${DEFAULT_HALL_NAME:-Main Dining Hall}
+
+    read -p "  Application Port [8090]: " APP_PORT
+    APP_PORT=${APP_PORT:-8090}
+
     cat <<EOF > .env
 ADMIN_USERNAME=${ADMIN_USERNAME}
 ADMIN_PASSWORD=${ADMIN_PASSWORD}
 ADMIN_NAME=${ADMIN_NAME}
 ADMIN_PHONE=${ADMIN_PHONE}
-PORT=8090
+ADMIN_EMAIL=${ADMIN_EMAIL}
+DEFAULT_HALL_NAME=${DEFAULT_HALL_NAME}
+PORT=${APP_PORT}
 EOF
-    echo "  Saved configuration to .env"
+    echo ""
+    echo "  Configuration saved to .env"
 fi
 
 # 3. Build & Run
@@ -87,12 +105,19 @@ echo ""
 echo "  URL: http://localhost:${APP_PORT}"
 echo ""
 if [ -n "$SHOW_USER" ]; then
-    echo "  Admin login: ${SHOW_USER} / ${SHOW_PASS}"
+    echo "  Super Admin Login:"
+    echo "    Username: ${SHOW_USER}"
+    echo "    Password: ${SHOW_PASS}"
 else
-    echo "  Admin login: Check .env file for credentials."
+    echo "  Super Admin Login: Check .env file for credentials."
 fi
 echo ""
-echo "  Commands:"
+echo "  Next Steps:"
+echo "    1. Open http://localhost:${APP_PORT} and log in as Super Admin."
+echo "    2. Go to Admin Panel -> Tables -> Halls to manage dining halls."
+echo "    3. Go to Admin Panel -> Users to add managers and register students."
+echo ""
+echo "  Management Commands:"
 echo "    docker compose logs app -f    View live logs"
 echo "    docker compose down           Stop services"
 echo "    docker compose up -d          Restart services"

@@ -124,17 +124,28 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser.
 
 ---
 
-## 🔑 Default Credentials
+## 🔑 First-Time Setup & Account Management
 
-When initialized with sample seed data, the following demo accounts are created:
+### 1. Super Admin Account Creation
+On first-time setup (via `setup.bat`, `./setup.sh`, or `.env`), the system prompts you to configure the initial **Super Admin** account:
+- **Username**: Configured during setup (default: `admin`)
+- **Password**: Configured during setup (default: `admin123`)
+- **Role**: `superadmin`
 
-| Role | Username | Password | Notes |
-| :--- | :--- | :--- | :--- |
-| **Super Admin** | `admin` | `admin123` (or `.env` value) | System Super Admin |
-| **Hall Manager** | `mukti_mgr` | `manager123` | Muktijoddha Hall Manager |
-| **Hall Manager** | `ekushe_mgr` | `manager123` | Amar Ekushe Hall Manager |
-| **Student** | `student1` | `student123` | Room 102 |
-| **Student** | `student2` | `student123` | Room 103 |
+### 2. Setting Up Subsequent Accounts
+To maintain a clean and isolated system, **no dummy managers or student accounts are created by default**. All other accounts are provisioned and managed by the Super Admin:
+
+1. **Dining Halls**:
+   - Log into the dashboard with your Super Admin credentials.
+   - Go to **Admin Panel** $\rightarrow$ **Tables** $\rightarrow$ **Halls**.
+   - Create and configure your institution's dining halls (rates, manager charges, guest policies).
+2. **Hall Managers & Staff**:
+   - Go to **Admin Panel** $\rightarrow$ **Tables** $\rightarrow$ **Users**.
+   - Click **Add Row** to create managers, assign them to halls, and grant manager permissions.
+3. **Students**:
+   - **Bulk Import**: Go to **Admin Panel** $\rightarrow$ **Users** and click **Bulk Add Users** to paste rooms, names, and phone numbers in bulk.
+   - **Self-Registration**: If the `signup` feature flag is enabled in the Admin Panel, students can register directly from the login page.
+   - **Single Add**: Add individual students directly via the Users table.
 
 ---
 

@@ -71,90 +71,40 @@ def seed_data():
             db.execute(text("ALTER TABLE daily_fee_overrides ADD COLUMN guest_charge FLOAT"))
             db.commit()
         
-        # Check if halls exist
+        # Check if halls exist; create default starter hall if none
         if db.query(models.Hall).count() == 0:
-            mukti = models.Hall(name="Muktijoddha Hall", guest_meal_rate=120.0, manager_charge_per_day=5.0)
-            ekushe = models.Hall(name="Amar Ekushe Hall", guest_meal_rate=120.0, manager_charge_per_day=5.0)
-            db.add(mukti)
-            db.add(ekushe)
+            default_hall_name = os.environ.get("DEFAULT_HALL_NAME", "Main Dining Hall").strip()
+            starter_hall = models.Hall(
+                name=default_hall_name,
+                guest_meal_rate=120.0,
+                manager_charge_per_day=5.0,
+                guest_charge_per_day=5.0
+            )
+            db.add(starter_hall)
             db.commit()
-            db.refresh(mukti)
-            db.refresh(ekushe)
-            
-            # Create users
-            # 1. Superadmin (credentials from env or defaults)
-            admin_username = os.environ.get("ADMIN_USERNAME", "admin")
-            admin_password = os.environ.get("ADMIN_PASSWORD", "admin123")
-            admin_name = os.environ.get("ADMIN_NAME", "System Super Admin")
-            admin_phone = os.environ.get("ADMIN_PHONE", "01711223344")
+            print(f"Default starter hall '{default_hall_name}' created.")
+
+        # Ensure Super Admin account exists
+        has_superadmin = db.query(models.User).filter(models.User.role == "superadmin").first()
+        if not has_superadmin:
+            admin_username = os.environ.get("ADMIN_USERNAME", "admin").strip() or "admin"
+            admin_password = os.environ.get("ADMIN_PASSWORD", "admin123").strip() or "admin123"
+            admin_name = os.environ.get("ADMIN_NAME", "System Super Admin").strip() or "System Super Admin"
+            admin_phone = os.environ.get("ADMIN_PHONE", "01711223344").strip() or "01711223344"
+            admin_email = os.environ.get("ADMIN_EMAIL", "admin@example.com").strip() or "admin@example.com"
+
             admin = models.User(
                 username=admin_username,
                 password_hash=auth.get_password_hash(admin_password),
                 role="superadmin",
                 name=admin_name,
                 phone=admin_phone,
+                email=admin_email,
                 balance=0.0
             )
-            
-            # 2. Managers
-            mgr1 = models.User(
-                username="mukti_mgr",
-                password_hash=auth.get_password_hash("manager123"),
-                role="manager",
-                hall_id=mukti.id,
-                room_number="302",
-                name="Sabbir Ahmed (Mukti Mgr)",
-                phone="01911223344",
-                balance=500.0,
-                free_meal=True
-            )
-            mgr2 = models.User(
-                username="ekushe_mgr",
-                password_hash=auth.get_password_hash("manager123"),
-                role="manager",
-                hall_id=ekushe.id,
-                room_number="205",
-                name="Tanvir Hossain (Ekushe Mgr)",
-                phone="01811223344",
-                balance=500.0,
-                free_meal=True
-            )
-            
-            # 3. Students
-            student1 = models.User(
-                username="student1",
-                password_hash=auth.get_password_hash("student123"),
-                role="student",
-                hall_id=mukti.id,
-                room_number="102",
-                name="Kamrul Islam",
-                phone="01511223344",
-                balance=1500.0
-            )
-            student2 = models.User(
-                username="student2",
-                password_hash=auth.get_password_hash("student123"),
-                role="student",
-                hall_id=mukti.id,
-                room_number="103",
-                name="Rakib Hasan",
-                phone="01611223344",
-                balance=2000.0
-            )
-            student3 = models.User(
-                username="student3",
-                password_hash=auth.get_password_hash("student123"),
-                role="student",
-                hall_id=ekushe.id,
-                room_number="210",
-                name="Sakib Al Hasan",
-                phone="01311223344",
-                balance=1200.0
-            )
-            
-            db.add_all([admin, mgr1, mgr2, student1, student2, student3])
+            db.add(admin)
             db.commit()
-            print("Database pre-seeded with sample data.")
+            print(f"Super Admin account '{admin_username}' created successfully.")
     finally:
         db.close()
 
@@ -260,16 +210,6 @@ async def startup_event():
             return
         migrate_db()
         seed_data()
-        # Import manual data from Excel (skip if file doesn't exist, e.g. in Docker)
-        import import_helper
-        db2 = SessionLocal()
-        try:
-            if os.path.exists(r"old_data\data.xlsx") or os.path.exists("old_data/data.xlsx"):
-                import_helper.import_manual_data(db2)
-            else:
-                print("No Excel data file found. Skipping manual import.")
-        finally:
-            db2.close()
     finally:
         release_app_lock(token)
         db.close()

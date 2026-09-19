@@ -35,15 +35,21 @@ if exist ".env" (
 if "!SKIP_SETUP!"=="1" echo   OK - Existing configuration found.
 
 if "!SKIP_SETUP!"=="0" (
-    echo   First-time setup. Creating admin account...
+    echo.
+    echo   ==============================================
+    echo      eDining First-Time Setup: Super Admin
+    echo   ==============================================
+    echo   Configure the initial Super Admin account.
+    echo   This account will have full access to create halls,
+    echo   assign managers, and register students.
     echo.
     echo   (Press Enter to accept defaults in brackets)
     echo.
 
-    set /p "ADMIN_USERNAME=  Admin username [admin]: "
+    set /p "ADMIN_USERNAME=  Super Admin username [admin]: "
     if "!ADMIN_USERNAME!"=="" set "ADMIN_USERNAME=admin"
 
-    set /p "ADMIN_PASSWORD=  Admin password [admin123]: "
+    set /p "ADMIN_PASSWORD=  Super Admin password [admin123]: "
     if "!ADMIN_PASSWORD!"=="" set "ADMIN_PASSWORD=admin123"
 
     set /p "ADMIN_NAME=  Admin display name [System Super Admin]: "
@@ -52,13 +58,26 @@ if "!SKIP_SETUP!"=="0" (
     set /p "ADMIN_PHONE=  Admin phone [01711223344]: "
     if "!ADMIN_PHONE!"=="" set "ADMIN_PHONE=01711223344"
 
+    set /p "ADMIN_EMAIL=  Admin email [admin@example.com]: "
+    if "!ADMIN_EMAIL!"=="" set "ADMIN_EMAIL=admin@example.com"
+
+    set /p "DEFAULT_HALL_NAME=  Starter Dining Hall name [Main Dining Hall]: "
+    if "!DEFAULT_HALL_NAME!"=="" set "DEFAULT_HALL_NAME=Main Dining Hall"
+
+    set /p "APP_PORT=  Application Port [8090]: "
+    if "!APP_PORT!"=="" set "APP_PORT=8090"
+
     (
         echo ADMIN_USERNAME=!ADMIN_USERNAME!
         echo ADMIN_PASSWORD=!ADMIN_PASSWORD!
         echo ADMIN_NAME=!ADMIN_NAME!
         echo ADMIN_PHONE=!ADMIN_PHONE!
+        echo ADMIN_EMAIL=!ADMIN_EMAIL!
+        echo DEFAULT_HALL_NAME=!DEFAULT_HALL_NAME!
+        echo PORT=!APP_PORT!
     ) > ".env"
-    echo   Saved.
+    echo.
+    echo   Configuration saved to .env
 )
 
 :START_CONTAINERS
@@ -111,35 +130,22 @@ echo.
 echo   URL: http://localhost:!APP_PORT!
 echo.
 if not "!SHOW_USER!"=="" (
-    echo   Admin login: !SHOW_USER! / !SHOW_PASS!
+    echo   Super Admin Login:
+    echo     Username: !SHOW_USER!
+    echo     Password: !SHOW_PASS!
 ) else (
-    echo   Admin login: Check .env file for credentials.
+    echo   Super Admin Login: Check .env file for credentials.
 )
 echo.
-docker compose exec -T app python -c "
-import sys
-sys.path.insert(0, '/app')
-from database import SessionLocal
-import models
-db = SessionLocal()
-users = db.query(models.User).order_by(models.User.role, models.User.id).all()
-if users:
-    w = max(len(u.username) for u in users)
-    for u in users:
-        hall = ''
-        if u.hall_id:
-            h = db.query(models.Hall).filter(models.Hall.id == u.hall_id).first()
-            if h: hall = ' (' + h.name + ')'
-        print('  [' + u.role.ljust(18) + '] ' + u.username.ljust(w) + hall)
-else:
-    print('  (no users found)')
-db.close()
-" 2>nul
+echo   Next Steps:
+echo     1. Open http://localhost:!APP_PORT! and log in as Super Admin.
+echo     2. Go to Admin Panel -^> Tables -^> Halls to manage dining halls.
+echo     3. Go to Admin Panel -^> Users to add managers and register students.
 echo.
-echo   Commands:
-echo     docker compose logs app -f    View logs
-echo     docker compose down           Stop
-echo     docker compose up -d          Start again
+echo   Management Commands:
+echo     docker compose logs app -f    View live logs
+echo     docker compose down           Stop services
+echo     docker compose up -d          Restart services
 echo.
 pause
 endlocal
