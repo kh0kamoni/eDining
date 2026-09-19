@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.git
+dining.db
+test_dining.db
+*.log
+venv
+.venv
+server_log.txt
+nul

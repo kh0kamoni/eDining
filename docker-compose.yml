@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:16-alpine
+    command: postgres -c max_connections=800 -c shared_buffers=256MB
+    environment:
+      POSTGRES_DB: edining
+      POSTGRES_USER: edining
+      POSTGRES_PASSWORD: edining_pass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edining"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    ports:
+      - "${PORT:-8090}:8000"
+    environment:
+      TZ: Asia/Dhaka
+      DATABASE_URL: postgresql://edining:edining_pass@db:5432/edining
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
+      ADMIN_NAME: ${ADMIN_NAME:-System Super Admin}
+      ADMIN_PHONE: ${ADMIN_PHONE:-01711223344}
+      DB_POOL_SIZE: ${DB_POOL_SIZE:-40}
+      DB_MAX_OVERFLOW: ${DB_MAX_OVERFLOW:-40}
+      APP_THREADPOOL_SIZE: ${APP_THREADPOOL_SIZE:-500}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eDining - Manager Approval Portal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { background: #0a0f1a; color: #e2e8f0; font-family: 'Segoe UI', system-ui, sans-serif; }
+.glass { background: rgba(15,23,42,0.9); backdrop-filter: blur(10px); border: 1px solid rgba(51,65,85,0.5); }
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+<!-- PIN LOGIN SCREEN -->
+<div id="pin-screen" class="glass rounded-3xl p-8 max-w-sm w-full text-center space-y-6">
+    <div class="w-16 h-16 mx-auto rounded-2xl bg-pink-500/15 flex items-center justify-center">
+        <i class="fa-solid fa-lock text-pink-400 text-2xl"></i>
+    </div>
+    <h1 class="text-xl font-bold text-white">Manager Approval</h1>
+    <p class="text-sm text-slate-400">Enter 4-digit PIN to access</p>
+    <input id="pin-input" type="password" maxlength="4" placeholder="••••" autofocus
+        class="w-24 text-center text-2xl font-mono tracking-widest bg-slate-950 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500 transition mx-auto block">
+    <button onclick="verifyPin()" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-3 rounded-xl transition">Unlock</button>
+    <p id="pin-error" class="text-rose-400 text-xs hidden"></p>
+</div>
+
+<!-- APPROVAL SCREEN -->
+<div id="approval-screen" class="hidden glass rounded-3xl p-6 max-w-2xl w-full space-y-6">
+    <div class="flex justify-between items-center">
+        <h1 class="text-lg font-bold text-white"><i class="fa-solid fa-list-check mr-2 text-pink-400"></i>Pending Approvals</h1>
+        <button onclick="location.reload()" class="text-xs text-slate-400 hover:text-white transition"><i class="fa-solid fa-arrow-right-from-bracket mr-1"></i> Lock</button>
+    </div>
+    
+    <div class="overflow-x-auto max-h-[500px]">
+        <table class="w-full text-left text-xs">
+            <thead class="sticky top-0 bg-slate-950/90">
+                <tr class="text-slate-400 uppercase tracking-wider text-[10px]">
+                    <th class="py-2.5 px-3">Date</th>
+                    <th class="py-2.5 px-3">TrxID</th>
+                    <th class="py-2.5 px-3">Claimed By</th>
+                    <th class="py-2.5 px-3 text-right">Amount</th>
+                    <th class="py-2.5 px-3 text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody id="pending-tbody" class="divide-y divide-slate-800/60 text-slate-300">
+                <tr><td colspan="5" class="py-6 text-center text-slate-500">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+const API = '/api';
+
+async function api(method, path) {
+    const r = await fetch(API + path, { method, headers: {'Content-Type':'application/json'} });
+    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
+    return r.json();
+}
+
+async function verifyPin() {
+    const pin = document.getElementById('pin-input').value.trim();
+    const err = document.getElementById('pin-error');
+    err.classList.add('hidden');
+    if (pin.length !== 4) { err.textContent = 'Enter 4-digit PIN'; err.classList.remove('hidden'); return; }
+    try {
+        await api('POST', '/manager/bkash/check-pin?pin=' + pin);
+        document.getElementById('pin-screen').classList.add('hidden');
+        document.getElementById('approval-screen').classList.remove('hidden');
+        loadPending();
+    } catch(e) { err.textContent = e.message; err.classList.remove('hidden'); }
+}
+
+async function loadPending() {
+    const tbody = document.getElementById('pending-tbody');
+    tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-slate-500"><i class="fa-solid fa-circle-notch fa-spin mr-1"></i>Loading...</td></tr>';
+    try {
+        const txns = await api('GET', '/manager/bkash/pending');
+        if (!txns.length) {
+            tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-slate-500">No pending transactions.</td></tr>';
+            return;
+        }
+        tbody.innerHTML = txns.map(t => `
+            <tr class="hover:bg-slate-900/30">
+                <td class="py-2.5 px-3 text-slate-400">${t.date_received || '-'}</td>
+                <td class="py-2.5 px-3 font-mono font-bold text-pink-300 tracking-widest">${t.trx_id}</td>
+                <td class="py-2.5 px-3">${t.claimed_by || '-'}</td>
+                <td class="py-2.5 px-3 text-right text-emerald-400 font-bold">BDT ${(t.amount||0).toFixed(2)}</td>
+                <td class="py-2.5 px-3 text-right">
+                    <input type="number" id="amt-${t.trx_id}" value="${(t.amount||100).toFixed(2)}" step="0.01" class="bg-slate-950 border border-slate-700 text-white text-xs py-1 px-2 w-20 rounded text-right mr-1">
+                    <button onclick="approve('${t.trx_id}')" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-2 py-0.5 rounded text-[10px] font-bold">Approve</button>
+                </td>
+            </tr>
+        `).join('');
+    } catch(e) { tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-rose-400">Failed to load.</td></tr>'; }
+}
+
+async function approve(trxId) {
+    const amt = parseFloat(document.getElementById('amt-' + trxId).value);
+    if (!amt || amt <= 0) return;
+    const pin = document.getElementById('pin-input').value.trim();
+    try {
+        const r = await api('POST', '/manager/bkash/approve?trx_id=' + trxId + '&amount=' + amt + '&pin=' + pin);
+        loadPending();
+    } catch(e) { alert(e.message); }
+}
+
+document.getElementById('pin-input').addEventListener('keydown', e => { if (e.key === 'Enter') verifyPin(); });
+</script>
+</body>
+</html>

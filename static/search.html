@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDining - Public Pay Portal</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍽%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --glass: rgba(255,255,255,0.5); --glass-border: rgba(0,0,0,0.06); }
+        @media (prefers-color-scheme: dark) { :root { --glass: rgba(30,30,40,0.65); --glass-border: rgba(255,255,255,0.06); } }
+        body { font-family: 'Outfit', sans-serif; background: #f5f5f0; }
+        @media (prefers-color-scheme: dark) { body { background: #0a0a0a; } }
+        .glass { background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); }
+        .text-emerald-400, .text-emerald-500 { color: #059669 !important; }
+        .text-rose-400, .text-rose-500 { color: #dc2626 !important; }
+        input, select { background: white !important; color: #1a1a1a !important; border-color: var(--glass-border) !important; }
+        @media (prefers-color-scheme: dark) { input, select { background: #1a1a1a !important; color: #f0f0f0 !important; } }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-6xl mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <div class="glass rounded-3xl p-6 mb-6 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl font-extrabold text-[#1a1a1a] dark:text-white">eDining</h1>
+                <p class="text-xs text-slate-500">Public Pay Portal — Mymensingh Engineering College</p>
+            </div>
+            <a href="/" class="text-xs text-slate-400 hover:text-emerald-500 transition"><i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> Main Portal</a>
+        </div>
+
+        <!-- Search Section -->
+        <div class="glass rounded-3xl p-6 mb-6">
+            <div class="flex flex-col md:flex-row gap-3 mb-4">
+                <div class="flex-1 relative">
+                    <i class="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="portal-search" type="text" placeholder="Search by name, username, or room..." oninput="portalSearch()" class="w-full rounded-xl py-2.5 pl-9 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50">
+                </div>
+                <select id="portal-filter" onchange="portalSearch()" class="rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50">
+                    <option value="all">All Students</option>
+                    <option value="native">Native</option>
+                    <option value="guest">Guest</option>
+                </select>
+            </div>
+            <div id="portal-results" class="space-y-2 max-h-96 overflow-y-auto"></div>
+        </div>
+
+        <!-- Statement Section -->
+        <div id="statement-section" class="hidden glass rounded-3xl p-4 md:p-6 space-y-5">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div>
+                    <h2 id="stmt-name" class="text-lg font-bold text-[#1a1a1a] dark:text-white"></h2>
+                    <p id="stmt-meta" class="text-xs text-slate-500"></p>
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <button onclick="openEmailReport()" class="flex-1 sm:flex-none bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 px-4 py-2 rounded-xl text-sm font-bold transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Email Report
+                    </button>
+                    <button onclick="openPayModal()" class="flex-1 sm:flex-none bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wallet"></i> Pay
+                    </button>
+                </div>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="grid grid-cols-3 gap-2 md:gap-3 text-center">
+                <div class="glass rounded-2xl p-3 md:p-4"><span class="text-[10px] text-slate-500 uppercase font-bold block">Deposits</span><span id="stmt-deposits" class="text-base md:text-lg font-extrabold text-emerald-500">BDT 0</span></div>
+                <div class="glass rounded-2xl p-3 md:p-4"><span class="text-[10px] text-slate-500 uppercase font-bold block">Charges</span><span id="stmt-charges" class="text-base md:text-lg font-extrabold text-rose-500">BDT 0</span></div>
+                <div class="glass rounded-2xl p-3 md:p-4"><span class="text-[10px] text-slate-500 uppercase font-bold block">Balance</span><span id="stmt-balance" class="text-base md:text-lg font-extrabold">BDT 0</span></div>
+            </div>
+
+            <!-- Email Report Card -->
+            <div id="stmt-email-card" class="hidden">
+                <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-9 h-9 rounded-full bg-emerald-500/15 flex items-center justify-center text-emerald-500"><i class="fa-solid fa-file-pdf text-sm"></i></div>
+                        <div>
+                            <h3 class="text-sm font-bold text-[#1a1a1a] dark:text-white">Email My Full Report</h3>
+                            <p class="text-[11px] text-slate-500">We'll send your complete statement (deposits, daily meal log &amp; transparency) as a PDF.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <input id="stmt-email-input" type="email" placeholder="Enter your email address..." class="flex-1 rounded-xl border border-slate-300 dark:border-slate-700 py-2.5 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50">
+                        <button onclick="sendEmailReport()" id="stmt-email-btn" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-5 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Send Report
+                        </button>
+                    </div>
+                    <div id="stmt-email-feedback" class="hidden mt-3 text-xs rounded-xl p-3"></div>
+                </div>
+            </div>
+
+            <!-- Two-column parallel layout: daily log (left) + cards (right) on desktop.
+                 On mobile the cards come FIRST, above the daily log. -->
+            <div class="flex flex-col gap-4 items-start lg:grid lg:grid-cols-[1fr_280px] lg:gap-4">
+
+                <!-- Right rail: cards — desktop col 2 top-aligned, mobile first -->
+                <div class="w-full min-w-0 space-y-4 lg:col-start-2 lg:row-start-1 lg:self-start lg:space-y-4">
+                    <!-- Next Meal -->
+                    <div class="glass rounded-2xl p-3 flex items-center justify-between">
+                        <span class="text-[10px] text-slate-500 font-bold uppercase">Next Meal</span>
+                        <span id="stmt-meal-status" class="text-sm font-extrabold text-slate-600 dark:text-slate-300">-</span>
+                    </div>
+
+                    <!-- Deposit History (under Next Meal) -->
+                    <div>
+                        <h3 class="text-sm font-bold text-[#1a1a1a] dark:text-white mb-2">Deposit History</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-[11px]">
+                                <thead class="bg-white/80 dark:bg-[#1a1a1a]/80 border-b border-slate-200 dark:border-slate-700">
+                                    <tr class="text-slate-500 uppercase tracking-wider">
+                                        <th class="py-1.5 px-2 text-left">Date</th>
+                                        <th class="py-1.5 px-2 text-right">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stmt-dep-tbody" class="divide-y divide-slate-100 dark:divide-slate-800"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Preferences & Status Cards -->
+                    <div class="grid grid-cols-2 gap-2" id="stmt-pref-cards">
+                        <div class="glass rounded-2xl p-2.5 text-center">
+                            <span class="text-[9px] text-slate-500 uppercase font-bold block">Egg Pref</span>
+                            <span id="stmt-egg-pref" class="text-sm font-extrabold mt-1 block">Normal</span>
+                        </div>
+                        <div class="glass rounded-2xl p-2.5 text-center">
+                            <span class="text-[9px] text-slate-500 uppercase font-bold block">Meat Pref</span>
+                            <span id="stmt-meat-pref" class="text-sm font-extrabold mt-1 block">Normal</span>
+                        </div>
+                        <div class="glass rounded-2xl p-2.5 text-center">
+                            <span class="text-[9px] text-slate-500 uppercase font-bold block">Active Days</span>
+                            <span id="stmt-active-days" class="text-sm font-extrabold text-emerald-500 mt-1 block">0</span>
+                        </div>
+                        <div class="glass rounded-2xl p-2.5 text-center">
+                            <span class="text-[9px] text-slate-500 uppercase font-bold block">Off Days</span>
+                            <span id="stmt-off-days" class="text-sm font-extrabold text-slate-500 mt-1 block">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Meal Log & Transparency — desktop col 1, mobile second -->
+                <div id="stmt-daily-section" class="min-w-0 w-full lg:col-start-1 lg:row-start-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-sm font-bold text-[#1a1a1a] dark:text-white">Daily Meal Log &amp; Transparency</h3>
+                        <span id="stmt-daily-count" class="text-[10px] text-slate-400 font-bold uppercase tracking-wider"></span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-[11px]">
+                            <thead class="bg-white/80 dark:bg-[#1a1a1a]/80 border-b border-slate-200 dark:border-slate-700">
+                                <tr class="text-slate-500 uppercase tracking-wider">
+                                    <th class="py-1.5 px-2 text-left">Date</th>
+                                    <th class="py-1.5 px-2 text-left">Status</th>
+                                    <th id="col-day-exp" class="py-1.5 px-2 text-right whitespace-nowrap">Expense</th>
+                                    <th id="col-meal-count" class="py-1.5 px-2 text-center">Meals</th>
+                                    <th id="col-rate" class="py-1.5 px-2 text-right whitespace-nowrap">Rate</th>
+                                    <th id="col-charge" class="py-1.5 px-2 text-right whitespace-nowrap">Your Charge</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stmt-tbody" class="divide-y divide-slate-100 dark:divide-slate-800"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pay Modal -->
+    <div id="pay-modal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div class="bg-white dark:bg-[#1a1a1a] rounded-3xl p-6 max-w-2xl w-full relative">
+            <button onclick="closePayModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+
+            <!-- Method selector tabs -->
+            <div class="flex border-b border-slate-200 dark:border-slate-700 mb-4">
+                <button id="pay-method-bkash" onclick="switchPayMethod('bkash')" class="flex-1 pb-3 text-sm font-bold text-pink-500 border-b-2 border-pink-500 focus:outline-none flex items-center justify-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-pink-500 flex items-center justify-center text-white font-extrabold text-xs">b</span> bKash
+                </button>
+                <button id="pay-method-nagad" onclick="switchPayMethod('nagad')" class="flex-1 pb-3 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 focus:outline-none flex items-center justify-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-xs">N</span> Nagad
+                </button>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Left: Instructions -->
+                <div id="pay-instructions" class="flex-1 bg-pink-500/5 border border-pink-500/15 rounded-2xl p-5">
+                    <div id="pay-bkash-content">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white font-extrabold text-lg">b</div>
+                            <div>
+                                <h4 class="text-sm font-bold dark:text-white">Deposit via bKash</h4>
+                                <span class="text-[10px] text-slate-500">Personal Account (Send Money)</span>
+                            </div>
+                        </div>
+                        <ol class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-600 dark:text-pink-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span><span>Send Money to our bKash Personal Number: <strong id="pay-bkash-number" class="text-pink-600 dark:text-pink-400 select-all">01700-000000</strong></span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-600 dark:text-pink-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span><span>Use Reference: <strong id="pay-ref-user" class="font-mono bg-pink-500/10 px-2 py-0.5 rounded text-pink-600 dark:text-pink-400 select-all"></strong></span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-600 dark:text-pink-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span><span>Copy the 10-character Transaction ID (TrxID) from the SMS.</span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-600 dark:text-pink-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">4</span><span>Enter the TrxID below and click Confirm.</span></li>
+                        </ol>
+                    </div>
+                    <div id="pay-nagad-content" class="hidden">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-lg">N</div>
+                            <div>
+                                <h4 class="text-sm font-bold dark:text-white">Deposit via Nagad</h4>
+                                <span class="text-[10px] text-slate-500">Personal Account (Send Money)</span>
+                            </div>
+                        </div>
+                        <ol class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span><span>Send Money to our Nagad Personal Number: <strong id="pay-nagad-number" class="text-orange-600 dark:text-orange-400 select-all"></strong></span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span><span>Use Reference: <strong class="font-mono bg-orange-500/10 px-2 py-0.5 rounded text-orange-600 dark:text-orange-400 select-all" id="pay-ref-user-nagad"></strong></span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span><span>Copy the Transaction ID from the Nagad SMS.</span></li>
+                            <li class="flex items-start gap-2"><span class="w-5 h-5 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">4</span><span>Enter the TrxID below and click Confirm.</span></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Right: Claim Form -->
+                <div class="w-full md:w-72 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <h4 class="text-sm font-bold dark:text-white">Claim Transaction</h4>
+                        <p class="text-xs text-slate-500">Student: <strong id="pay-student-name" class="text-emerald-600 dark:text-emerald-400"></strong> (<span id="pay-student-user" class="font-mono"></span>)</p>
+                        <input id="pay-trx" type="text" placeholder="TrxID e.g. AL38K9X8P3" maxlength="10" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 py-2.5 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 uppercase font-mono">
+                        <button onclick="handlePayClaim()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> Confirm Payment
+                        </button>
+                        <div id="pay-feedback" class="hidden text-xs rounded-xl p-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API = "/api";
+        let selectedUserId = null;
+        let searchTimeout;
+
+        async function portalSearch() {
+            clearTimeout(searchTimeout);
+            const q = document.getElementById("portal-search").value.trim();
+            const filter = document.getElementById("portal-filter").value;
+            const results = document.getElementById("portal-results");
+            document.getElementById("statement-section").classList.add("hidden");
+
+            if (!q) { results.innerHTML = '<div class="text-xs text-slate-400 text-center py-6">Start typing to search for students.</div>'; return; }
+
+            searchTimeout = setTimeout(async () => {
+                try {
+                    const resp = await fetch(`${API}/public/students?query=${encodeURIComponent(q)}&filter_type=${filter}`);
+                    if (!resp.ok) { results.innerHTML = '<div class="text-xs text-rose-500 text-center py-6">Error: ' + resp.status + '</div>'; return; }
+                    const data = await resp.json();
+                    if (data.length === 0) { results.innerHTML = '<div class="text-xs text-slate-400 text-center py-6">No students found.</div>'; return; }
+                    results.innerHTML = data.map(s => `
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-white/60 dark:bg-white/5 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500/50 transition" onclick="loadStatement(${s.id}, '${s.name}', '${s.username}', '${s.room_number || 'N/A'}')">
+                            <div><p class="text-sm font-bold dark:text-white">${s.name}</p><p class="text-[10px] text-slate-500">${s.username} · Room ${s.room_number || 'N/A'}</p></div>
+                            <i class="fa-solid fa-chevron-right text-slate-400 text-xs"></i>
+                        </div>
+                    `).join("");
+                } catch (e) { results.innerHTML = '<div class="text-xs text-rose-500 text-center py-6">Error: ' + e.message + '</div>'; }
+            }, 300);
+        }
+
+        async function loadStatement(id, name, username, room) {
+            selectedUserId = id;
+            document.getElementById("portal-results").innerHTML = "";
+            document.getElementById("stmt-name").textContent = name;
+            document.getElementById("stmt-meta").textContent = `${username} · Room ${room}`;
+            document.getElementById("statement-section").classList.remove("hidden");
+            document.getElementById("stmt-tbody").innerHTML = '<tr><td colspan="6" class="py-6 text-center text-slate-400">Loading daily log...</td></tr>';
+
+            try {
+                const data = await (await fetch(`${API}/public/students/${id}/statement`)).json();
+                if (!data.cycle) {
+                    document.getElementById("stmt-tbody").innerHTML = '<tr><td colspan="6" class="py-6 text-center text-slate-400">No active cycle.</td></tr>';
+                    document.getElementById("stmt-meal-status").textContent = '-';
+                    return;
+                }
+
+                const vis = data.visibility || {};
+                const showExp = vis.daily_expenses !== false;
+                const showMeals = vis.meal_count !== false;
+                const showRate = vis.daily_rates !== false;
+                const showCharge = vis.daily_charges !== false;
+                const setCol = (cid, show) => { const el = document.getElementById(cid); if (el) el.style.display = show ? '' : 'none'; };
+                setCol("col-day-exp", showExp);
+                setCol("col-meal-count", showMeals);
+                setCol("col-rate", showRate);
+                setCol("col-charge", showCharge);
+
+                document.getElementById("stmt-deposits").textContent = `BDT ${data.summary.total_deposits.toFixed(2)}`;
+                document.getElementById("stmt-charges").textContent = `BDT ${data.summary.total_charges.toFixed(2)}`;
+                const bal = data.summary.balance;
+                const balEl = document.getElementById("stmt-balance");
+                balEl.textContent = `BDT ${bal < 0 ? '-' : ''}${Math.abs(bal).toFixed(2)}`;
+                balEl.className = `text-base md:text-lg font-extrabold ${bal >= 0 ? 'text-emerald-500' : 'text-rose-500'}`;
+
+                // Preferences & status
+                const eggLabels = { normal: 'Normal', if_pangas_then_egg: 'Pangas→Egg', egg_instead_of_fish: 'Egg instead of Fish' };
+                const meatLabels = { normal: 'Beef', beef: 'Beef', mutton: 'Mutton' };
+                document.getElementById("stmt-egg-pref").textContent = eggLabels[data.student.fish_egg_pref] || 'Normal';
+                document.getElementById("stmt-meat-pref").textContent = meatLabels[data.student.meat_pref] || 'Beef';
+                const activeDays = data.daily_meals.filter(m => m.status !== 'off').length;
+                const offDays = data.daily_meals.filter(m => m.status === 'off').length;
+                // Next meal status (first non-off from today onwards)
+                const statusLabels = { both: 'Both', lunch_only: 'Lunch', dinner_only: 'Dinner', double: 'Double', triple: 'Triple', off: 'Off' };
+                const nextStatus = data.next_meal_status || 'off';
+                document.getElementById("stmt-meal-status").textContent = statusLabels[nextStatus] || nextStatus;
+
+                document.getElementById("stmt-active-days").textContent = activeDays;
+                document.getElementById("stmt-off-days").textContent = offDays;
+
+                // Transparency map by date (server computes only when feature allowed)
+                const transMap = {};
+                (data.daily_transparency || []).forEach(t => transMap[t.date] = t);
+
+                // Compact table rows — full list visible, no inner scroll
+                document.getElementById("stmt-daily-count").textContent = `${data.daily_meals.length} days`;
+                document.getElementById("stmt-tbody").innerHTML = data.daily_meals.map(m => {
+                    const sl = statusLabels;
+                    const tr = transMap[m.date] || {};
+                    const off = m.status === 'off';
+                    const dayExpCell = showExp ? `<td class="py-1 px-2 text-right text-slate-500 whitespace-nowrap">${tr.total_expenses != null ? 'BDT ' + tr.total_expenses.toFixed(2) : '—'}</td>` : '';
+                    const mealsCell = showMeals ? `<td class="py-1 px-2 text-center text-slate-500">${tr.meal_count != null ? tr.meal_count : '—'}</td>` : '';
+                    const rateCell = showRate ? `<td class="py-1 px-2 text-right text-slate-500 whitespace-nowrap">BDT ${m.final_rate.toFixed(2)}</td>` : '';
+                    const chargeCell = showCharge ? `<td class="py-1 px-2 text-right font-bold whitespace-nowrap ${m.charge > 0 ? 'text-rose-500' : 'text-slate-500'}">BDT ${m.charge.toFixed(2)}</td>` : '';
+                    return `<tr class="${off ? 'bg-slate-50/40 dark:bg-slate-900/20 opacity-70' : 'hover:bg-white/30 dark:hover:bg-white/5'}">
+                        <td class="py-1 px-2 font-semibold whitespace-nowrap">${m.date}</td>
+                        <td class="py-1 px-2">
+                            <span class="text-[9px] font-bold uppercase tracking-wide rounded-full px-1.5 py-0.5 ${off ? 'bg-slate-500/15 text-slate-500' : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400'}">${sl[m.status] || m.status}</span>
+                            ${m.is_guest ? '<span class="text-[9px] font-bold text-cyan-500 bg-cyan-500/10 px-1.5 py-0.5 rounded-full ml-1">GUEST</span>' : ''}
+                        </td>
+                        ${dayExpCell}${mealsCell}${rateCell}${chargeCell}
+                    </tr>`;
+                }).join("");
+
+                document.getElementById("stmt-dep-tbody").innerHTML = data.deposits.length === 0
+                    ? '<tr><td colspan="2" class="py-4 text-center text-slate-400">No deposits.</td></tr>'
+                    : data.deposits.map(d => `<tr class="hover:bg-white/30 dark:hover:bg-white/5">
+                        <td class="py-1.5 px-2">${d.date}</td>
+                        <td class="py-1.5 px-2 text-right text-emerald-500 font-bold whitespace-nowrap">+BDT ${d.amount.toFixed(2)}</td>
+                    </tr>`).join("");
+
+                // Prefill email from student's saved address if available
+                const emailPrefill = document.getElementById("stmt-email-input");
+                if (emailPrefill && data.student && data.student.email && !emailPrefill.value) {
+                    emailPrefill.value = data.student.email;
+                }
+
+            } catch (e) { document.getElementById("stmt-tbody").innerHTML = '<tr><td colspan="6" class="py-6 text-center text-rose-500">Failed to load statement.</td></tr>'; }
+        }
+
+        function openEmailReport() {
+            document.getElementById("stmt-email-card").classList.remove("hidden");
+            document.getElementById("stmt-email-input").focus();
+        }
+
+        function closeEmailFeedback() {
+            const fb = document.getElementById("stmt-email-feedback");
+            fb.className = "hidden mt-3 text-xs rounded-xl p-3";
+            fb.textContent = "";
+        }
+
+        async function sendEmailReport() {
+            const input = document.getElementById("stmt-email-input");
+            const email = (input.value || "").trim();
+            const fb = document.getElementById("stmt-email-feedback");
+            const btn = document.getElementById("stmt-email-btn");
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                fb.className = "mt-3 text-xs rounded-xl p-3 bg-rose-500/10 border border-rose-500/20 text-rose-500";
+                fb.textContent = "Please enter a valid email address.";
+                fb.classList.remove("hidden");
+                return;
+            }
+            if (!selectedUserId) { return; }
+
+            closeEmailFeedback();
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-xs"></i> Sending...';
+            try {
+                const resp = await fetch(`${API}/public/students/${selectedUserId}/email-report`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: email, user_id: selectedUserId })
+                });
+                const r = await resp.json();
+                if (resp.ok) {
+                    fb.className = "mt-3 text-xs rounded-xl p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400";
+                    fb.textContent = r.message || "Report sent!";
+                } else {
+                    fb.className = "mt-3 text-xs rounded-xl p-3 bg-rose-500/10 border border-rose-500/20 text-rose-500";
+                    fb.textContent = r.detail || "Failed to send report.";
+                }
+            } catch (e) {
+                fb.className = "mt-3 text-xs rounded-xl p-3 bg-rose-500/10 border border-rose-500/20 text-rose-500";
+                fb.textContent = "Network error. Could not reach the server.";
+            }
+            fb.classList.remove("hidden");
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane text-xs"></i> Send Report';
+        }
+
+        function openPayModal() {
+            const name = document.getElementById("stmt-name").textContent;
+            const user = document.getElementById("stmt-meta").textContent.split("·")[0].trim();
+            document.getElementById("pay-student-name").textContent = name;
+            document.getElementById("pay-student-user").textContent = user;
+            document.getElementById("pay-ref-user").textContent = user;
+            document.getElementById("pay-ref-user-nagad").textContent = user;
+            document.getElementById("pay-trx").value = "";
+            document.getElementById("pay-feedback").className = "hidden text-xs rounded-xl p-3";
+            fetch("/api/manager/public-payment-numbers").then(r => r.json()).then(d => {
+                document.getElementById("pay-bkash-number").textContent = d.bkash_number || "01700-000000";
+                document.getElementById("pay-nagad-number").textContent = d.nagad_number || "Not configured";
+            }).catch(() => {});
+            document.getElementById("pay-modal").classList.remove("hidden");
+        }
+        function closePayModal() { document.getElementById("pay-modal").classList.add("hidden"); }
+
+        function switchPayMethod(method) {
+            const bt = document.getElementById("pay-method-bkash"), nt = document.getElementById("pay-method-nagad");
+            const bc = document.getElementById("pay-bkash-content"), nc = document.getElementById("pay-nagad-content");
+            const instr = document.getElementById("pay-instructions");
+            if (method === "bkash") {
+                bt.className = "flex-1 pb-3 text-sm font-bold text-pink-500 border-b-2 border-pink-500 focus:outline-none flex items-center justify-center gap-2";
+                nt.className = "flex-1 pb-3 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 focus:outline-none flex items-center justify-center gap-2";
+                bc.classList.remove("hidden"); nc.classList.add("hidden");
+                instr.className = "flex-1 bg-pink-500/5 border border-pink-500/15 rounded-2xl p-5";
+            } else {
+                nt.className = "flex-1 pb-3 text-sm font-bold text-orange-500 border-b-2 border-orange-500 focus:outline-none flex items-center justify-center gap-2";
+                bt.className = "flex-1 pb-3 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 focus:outline-none flex items-center justify-center gap-2";
+                nc.classList.remove("hidden"); bc.classList.add("hidden");
+                instr.className = "flex-1 bg-orange-500/5 border border-orange-500/15 rounded-2xl p-5";
+            }
+        }
+
+        async function handlePayClaim() {
+            const username = document.getElementById("pay-student-user").textContent;
+            const trxId = document.getElementById("pay-trx").value.trim().toUpperCase();
+            if (!trxId || trxId.length < 5) { showPayFeedback("Enter a valid Transaction ID.", true); return; }
+            const btn = document.querySelector("#pay-modal .bg-emerald-500");
+            btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
+            try {
+                const resp = await fetch(`${API}/public/deposit/claim?username=${encodeURIComponent(username)}&trx_id=${encodeURIComponent(trxId)}`, { method: "POST" });
+                const r = await resp.json();
+                if (resp.ok) {
+                    if (r.immediate) {
+                        showPayFeedback(r.message, false);
+                        document.getElementById("pay-trx").value = "";
+                        await loadStatement(selectedUserId, document.getElementById("stmt-name").textContent, username, "");
+                    } else {
+                        showPayFeedback(r.message, false);
+                    }
+                } else {
+                    showPayFeedback(r.detail || "Payment failed.", true);
+                }
+            } catch (e) { showPayFeedback(e.message || "Payment failed.", true); }
+            btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Confirm Payment';
+        }
+        function showPayFeedback(msg, isError) {
+            const el = document.getElementById("pay-feedback");
+            el.className = `text-xs rounded-xl p-3 ${isError ? 'bg-rose-500/10 border border-rose-500/20 text-rose-500' : 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-500'}`;
+            el.classList.remove("hidden"); el.textContent = msg;
+        }
+    </script>
+</body>
+</html>

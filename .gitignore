@@ -1,0 +1,28 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing caches
+.pytest_cache/
+
+# Environments & secrets
+.env
+venv/
+.venv/
+env/
+
+# Databases
+*.db
+*.sqlite3
+
+# Logs
+*.log
+server_log.txt
+srv_stderr.txt
+srv_stdout.txt
+
+# OS / Windows artifacts
+nul
+Thumbs.db
+.DS_Store
