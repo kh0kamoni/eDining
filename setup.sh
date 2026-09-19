@@ -68,6 +68,27 @@ if [ "$SKIP_SETUP" -eq 0 ]; then
     read -p "  Application Port [8090]: " APP_PORT
     APP_PORT=${APP_PORT:-8090}
 
+    INIT_HALLS=1
+    if [ -f "halls.csv" ]; then
+        echo ""
+        read -p "  Found halls.csv. Initialize existing dining halls from halls.csv? [Y/n]: " ASK_HALLS
+        if [ "$ASK_HALLS" = "n" ] || [ "$ASK_HALLS" = "N" ]; then
+            INIT_HALLS=0
+        else
+            INIT_HALLS=1
+        fi
+    fi
+
+    INIT_USERS=1
+    if [ -f "users.csv" ]; then
+        read -p "  Found users.csv. Initialize existing users from users.csv? [Y/n]: " ASK_USERS
+        if [ "$ASK_USERS" = "n" ] || [ "$ASK_USERS" = "N" ]; then
+            INIT_USERS=0
+        else
+            INIT_USERS=1
+        fi
+    fi
+
     cat <<EOF > .env
 ADMIN_USERNAME=${ADMIN_USERNAME}
 ADMIN_PASSWORD=${ADMIN_PASSWORD}
@@ -75,14 +96,12 @@ ADMIN_NAME=${ADMIN_NAME}
 ADMIN_PHONE=${ADMIN_PHONE}
 ADMIN_EMAIL=${ADMIN_EMAIL}
 DEFAULT_HALL_NAME=${DEFAULT_HALL_NAME}
+INIT_HALLS=${INIT_HALLS}
+INIT_USERS=${INIT_USERS}
 PORT=${APP_PORT}
 EOF
     echo ""
     echo "  Configuration saved to .env"
-fi
-
-if [ -f "users.csv" ]; then
-    echo "  OK - Found users.csv: existing user accounts will be seeded on startup."
 fi
 
 # 3. Build & Run

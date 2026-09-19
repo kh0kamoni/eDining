@@ -71,7 +71,16 @@ def seed_data():
             db.execute(text("ALTER TABLE daily_fee_overrides ADD COLUMN guest_charge FLOAT"))
             db.commit()
         
-        # Check if halls exist; create default starter hall if none
+        import import_helper
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # 1. Initialize halls from halls.csv if enabled
+        init_halls_flag = os.environ.get("INIT_HALLS", "1").strip().lower() in ["1", "true", "yes"]
+        halls_csv_path = os.path.join(base_dir, "halls.csv")
+        if init_halls_flag and os.path.exists(halls_csv_path):
+            import_helper.import_halls_from_csv(db, halls_csv_path)
+
+        # Fallback starter hall if no halls exist
         if db.query(models.Hall).count() == 0:
             default_hall_name = os.environ.get("DEFAULT_HALL_NAME", "Main Dining Hall").strip()
             starter_hall = models.Hall(
@@ -84,7 +93,7 @@ def seed_data():
             db.commit()
             print(f"Default starter hall '{default_hall_name}' created.")
 
-        # Ensure Super Admin account exists
+        # 2. Ensure Super Admin account exists
         has_superadmin = db.query(models.User).filter(models.User.role == "superadmin").first()
         if not has_superadmin:
             admin_username = os.environ.get("ADMIN_USERNAME", "admin").strip() or "admin"
@@ -106,12 +115,11 @@ def seed_data():
             db.commit()
             print(f"Super Admin account '{admin_username}' created successfully.")
 
-        # Check if users.csv exists to initialize existing users into the database
-        import import_helper
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        csv_path = os.path.join(base_dir, "users.csv")
-        if os.path.exists(csv_path):
-            import_helper.import_users_from_csv(db, csv_path)
+        # 3. Initialize users from users.csv if enabled
+        init_users_flag = os.environ.get("INIT_USERS", "1").strip().lower() in ["1", "true", "yes"]
+        users_csv_path = os.path.join(base_dir, "users.csv")
+        if init_users_flag and os.path.exists(users_csv_path):
+            import_helper.import_users_from_csv(db, users_csv_path)
     finally:
         db.close()
 

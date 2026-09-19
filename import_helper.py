@@ -459,6 +459,71 @@ def import_manual_data(db: Session):
     print("Excel import completed successfully!")
 
 
+def import_halls_from_csv(db: Session, filepath: str = None) -> int:
+    """
+    Imports dining halls from a CSV file into the database.
+    Skips halls that already exist.
+    """
+    import csv
+
+    if not filepath:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        filepath = os.path.join(base_dir, "halls.csv")
+
+    if not os.path.exists(filepath):
+        print(f"Notice: halls.csv file not found at {filepath}. Skipping halls import.")
+        return 0
+
+    print(f"Starting import of halls from {filepath}...")
+    imported_count = 0
+    skipped_count = 0
+
+    try:
+        with open(filepath, mode="r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = (row.get("name") or "").strip()
+                if not name:
+                    continue
+
+                existing = db.query(models.Hall).filter(models.Hall.name.ilike(name)).first()
+                if existing:
+                    skipped_count += 1
+                    continue
+
+                try:
+                    guest_rate = float(row.get("guest_meal_rate", 120.0) or 120.0)
+                except (ValueError, TypeError):
+                    guest_rate = 120.0
+
+                try:
+                    mgr_charge = float(row.get("manager_charge_per_day", 5.0) or 5.0)
+                except (ValueError, TypeError):
+                    mgr_charge = 5.0
+
+                try:
+                    guest_charge = float(row.get("guest_charge_per_day", 5.0) or 5.0)
+                except (ValueError, TypeError):
+                    guest_charge = 5.0
+
+                hall = models.Hall(
+                    name=name,
+                    guest_meal_rate=guest_rate,
+                    manager_charge_per_day=mgr_charge,
+                    guest_charge_per_day=guest_charge
+                )
+                db.add(hall)
+                imported_count += 1
+
+            db.commit()
+            print(f"Halls CSV import completed: {imported_count} imported, {skipped_count} skipped.")
+            return imported_count
+    except Exception as e:
+        db.rollback()
+        print(f"Error during halls.csv import: {e}")
+        return 0
+
+
 def import_users_from_csv(db: Session, filepath: str = None) -> int:
     """
     Imports users from a CSV file into the database on first-time setup.

@@ -150,14 +150,17 @@ To maintain a clean and isolated system, **no dummy managers or student accounts
    - **Self-Registration**: If the `signup` feature flag is enabled in the Admin Panel, students can register directly from the login page.
    - **Single Add**: Add individual students directly via the Users table.
 
-### 3. Pre-Seeding Existing Users via `users.csv`
-The system includes an automated migration and pre-seeding mechanism for existing accounts:
-- If a `users.csv` file is present in the project root directory during first-time setup, the application automatically imports all user accounts, room numbers, dietary preferences, balances, and dining halls into the database.
-- **Password Support**: Supports both existing bcrypt hashes (e.g., `$2b$...`) and plaintext passwords (which are hashed on the fly).
-- **Hall Provisioning**: Any dining hall referenced in `users.csv` is created automatically if not already present.
-- **Idempotent**: Existing accounts with duplicate usernames are safely skipped.
-- **Manual / CLI Import**: You can also run or re-run user CSV import at any time with:
+### 3. Pre-Seeding Existing Halls & Users via CSV
+The system includes an automated migration and pre-seeding mechanism for existing institutional setups:
+- **`halls.csv`**: Contains pre-configured dining halls, guest rates, manager charges, and guest charges.
+  - When present, the setup wizard interactively asks if you want to initialize halls from `halls.csv`.
+- **`users.csv`**: Contains existing user accounts, roles (`manager`, `student`), room numbers, dietary preferences, balances, and password hashes.
+  - When present, the setup wizard interactively asks if you want to initialize users from `users.csv`.
+- **Password Support**: Supports both existing bcrypt hashes (e.g., `$2b$...`) and plaintext passwords (hashed automatically).
+- **Idempotent**: Existing halls and users with duplicate identifiers are safely skipped without overwriting.
+- **Manual / CLI Import**: You can also run or re-run imports at any time via CLI:
   ```bash
+  # Import users (and auto-resolve halls)
   python import_helper.py users.csv
   ```
 

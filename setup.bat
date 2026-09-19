@@ -74,6 +74,27 @@ if "!SKIP_SETUP!"=="0" (
     set /p "APP_PORT=  Application Port [8090]: "
     if "!APP_PORT!"=="" set "APP_PORT=8090"
 
+    set "INIT_HALLS=1"
+    if exist "halls.csv" (
+        echo.
+        set /p "ASK_HALLS=  Found halls.csv. Initialize existing dining halls from halls.csv? [Y/n]: "
+        if /i "!ASK_HALLS!"=="n" (
+            set "INIT_HALLS=0"
+        ) else (
+            set "INIT_HALLS=1"
+        )
+    )
+
+    set "INIT_USERS=1"
+    if exist "users.csv" (
+        set /p "ASK_USERS=  Found users.csv. Initialize existing users from users.csv? [Y/n]: "
+        if /i "!ASK_USERS!"=="n" (
+            set "INIT_USERS=0"
+        ) else (
+            set "INIT_USERS=1"
+        )
+    )
+
     (
         echo ADMIN_USERNAME=!ADMIN_USERNAME!
         echo ADMIN_PASSWORD=!ADMIN_PASSWORD!
@@ -81,14 +102,12 @@ if "!SKIP_SETUP!"=="0" (
         echo ADMIN_PHONE=!ADMIN_PHONE!
         echo ADMIN_EMAIL=!ADMIN_EMAIL!
         echo DEFAULT_HALL_NAME=!DEFAULT_HALL_NAME!
+        echo INIT_HALLS=!INIT_HALLS!
+        echo INIT_USERS=!INIT_USERS!
         echo PORT=!APP_PORT!
     ) > ".env"
     echo.
     echo   Configuration saved to .env
-)
-
-if exist "users.csv" (
-    echo   OK - Found users.csv: existing user accounts will be seeded on startup.
 )
 
 :START_CONTAINERS
