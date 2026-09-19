@@ -132,6 +132,9 @@ On first-time setup (via `setup.bat`, `./setup.sh`, or `.env`), the system promp
 - **Password**: Configured during setup (default: `admin123`)
 - **Role**: `superadmin`
 
+> [!IMPORTANT]
+> **No hardcoded username or password**: There are no hardcoded credentials baked into the system. The Super Admin username and password are set exclusively by the user who initializes the project during first-time setup.
+
 ### 2. Setting Up Subsequent Accounts
 To maintain a clean and isolated system, **no dummy managers or student accounts are created by default**. All other accounts are provisioned and managed by the Super Admin:
 

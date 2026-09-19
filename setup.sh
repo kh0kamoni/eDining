@@ -26,9 +26,16 @@ echo "  OK - Docker Compose found."
 
 # 2. Check / create .env
 echo "[2/5] Checking configuration..."
+SKIP_SETUP=0
 if [ -f ".env" ] && grep -q "^ADMIN_USERNAME=" ".env"; then
-    echo "  OK - Existing configuration found."
-else
+    echo "  Existing configuration found in .env."
+    read -p "  Do you want to reconfigure Super Admin credentials? (y/N): " RECONFIG
+    if [ "$RECONFIG" != "y" ] && [ "$RECONFIG" != "Y" ]; then
+        SKIP_SETUP=1
+    fi
+fi
+
+if [ "$SKIP_SETUP" -eq 0 ]; then
     echo ""
     echo "  =============================================="
     echo "     eDining First-Time Setup: Super Admin"

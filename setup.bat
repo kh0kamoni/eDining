@@ -30,9 +30,16 @@ echo [2/5] Checking configuration...
 set "SKIP_SETUP=0"
 if exist ".env" (
     findstr /b "ADMIN_USERNAME=" .env >nul
-    if !errorlevel! equ 0 set "SKIP_SETUP=1"
+    if !errorlevel! equ 0 (
+        echo   Existing configuration found in .env.
+        set /p "RECONFIG=  Do you want to reconfigure Super Admin credentials? (y/N): "
+        if /i "!RECONFIG!"=="y" (
+            set "SKIP_SETUP=0"
+        ) else (
+            set "SKIP_SETUP=1"
+        )
+    )
 )
-if "!SKIP_SETUP!"=="1" echo   OK - Existing configuration found.
 
 if "!SKIP_SETUP!"=="0" (
     echo.
