@@ -323,7 +323,8 @@ def bulk_create_users(
                         status="off" if d_str < today_str else new_user.status or "both",
                         ticked_lunch=False if d_str < today_str else True,
                         ticked_dinner=False if d_str < today_str else True,
-                        kept_lunch_for_dinner=False, is_guest=False
+                        kept_lunch_for_dinner=False, is_guest=False,
+                        is_deducted=False, amount_deducted=0.0
                     ))
         created_count += 1
         

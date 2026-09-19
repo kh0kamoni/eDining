@@ -78,7 +78,9 @@ def start_cycle(payload: schemas.MealCycleCreate, current_user: models.User = De
                 ticked_lunch=t_lunch,
                 ticked_dinner=t_dinner,
                 kept_lunch_for_dinner=False,
-                is_guest=False
+                is_guest=False,
+                is_deducted=False,
+                amount_deducted=0.0
             ))
             
     db.commit()

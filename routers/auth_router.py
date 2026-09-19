@@ -75,7 +75,9 @@ def register(user_data: schemas.UserCreate, db: Session = Depends(get_db)):
                     ticked_lunch=False if d_str < today_str else (new_user.status in ["both", "lunch_only", "double", "triple"]),
                     ticked_dinner=False if d_str < today_str else (new_user.status in ["both", "dinner_only", "double", "triple"]),
                     kept_lunch_for_dinner=False,
-                    is_guest=False
+                    is_guest=False,
+                    is_deducted=False,
+                    amount_deducted=0.0
                 ))
                 
     db.commit()

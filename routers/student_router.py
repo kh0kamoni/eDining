@@ -382,7 +382,9 @@ def toggle_meal_status(payload: schemas.MealStatusToggle, current_user: models.U
                 status=payload.status,
                 ticked_lunch=t_lunch,
                 ticked_dinner=t_dinner,
-                is_guest=False
+                is_guest=False,
+                is_deducted=False,
+                amount_deducted=0.0
             )
             db.add(status_rec)
         else:
@@ -488,7 +490,9 @@ def toggle_guest_meal(payload: schemas.MealStatusToggle, target_hall_id: int, cu
                 ticked_lunch=t_lunch,
                 ticked_dinner=t_dinner,
                 is_guest=True,
-                guest_from_hall_id=current_user.hall_id
+                guest_from_hall_id=current_user.hall_id,
+                is_deducted=False,
+                amount_deducted=0.0
             )
             db.add(status_rec)
         else:
